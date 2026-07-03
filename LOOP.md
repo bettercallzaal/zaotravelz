@@ -22,8 +22,9 @@ Every wake runs three phases. No iteration ships drafts only - each one must CHE
 
 ## Phase 3 - UPDATE
 
-- Status board artifact (campaign-hq.html) - single source of truth
-- partners-tracker.md statuses
+- NO MORE ARTIFACTS (Zaal, 2026-07-03). All pages ship to docs/ in the zaotravelz repo and deploy via GitHub Pages: https://bettercallzaal.github.io/zaotravelz/
+- Status board = docs/index.html (single source of truth); sponsor pitch = docs/devcon8.html
+- Every iteration: edit docs/, update partners-tracker.md, then git commit + push (Pages redeploys automatically)
 - Report to Zaal: what changed, what is blocked on him (keep the blocked list SHORT and explicit)
 
 ## Cadence rules
