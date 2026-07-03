@@ -9,7 +9,7 @@ I'm Zaal Panthaki (BetterCallZaal), founder of The ZAO, a decentralized impact n
 ## What I've built (proof of work field)
 
 - The ZAO: 188 members onchain (Base, Optimism Respect tokens), weekly Respect Game governance running 90+ consecutive weeks, 22-artist roster with 378K+ combined Spotify monthly listeners.
-- WaveWarZ (co-founder): first onchain music prediction market, 735 live battles, $50-60K+ volume on Solana, expanding to Base. Artists earn 1% of all trading volume instantly.
+- WaveWarZ (co-founder): first onchain music prediction market, 950 live battles, $50-60K+ volume on Solana, expanding to Base. Artists earn 1% of all trading volume instantly.
 - COC Concertz: 150+ consecutive weekly virtual concerts.
 - IRL: produced ZAO-PALOOZA (NFT NYC), ZAO-CHELLA (Miami Art Basel), ZAO-PROS (ETH Denver), and ZAOstock 2026 (Oct 3, Maine's first crypto-native music festival, fiscally sponsored via Fractured Atlas).
 - Ethereum Build Camp (Devcon-supported, July 2026): participant, shipped [PROJECT NAME] - fill in after demo day Jul 11.

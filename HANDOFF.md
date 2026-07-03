@@ -15,7 +15,7 @@ Written 2026-07-03 at session close. The build loop stops here; the next session
 | Workstream | State |
 |---|---|
 | Campaign HQ page | Live. Signals section shows Builder Discount WATCHING (not open as of Jul 3 pm), Ecosystem Program R2 WATCHING, bettercallzaal.com DOWN |
-| devcon8 pitch page | Live but numbers STALE vs Artizen intake (735 battles vs 950; 188 members vs 250+ artists) - reconcile with Zaal, then update docs/devcon8.html |
+| devcon8 pitch page | Live. Numbers RECONCILED 2026-07-03 (950 battles confirmed by Zaal, fixed on all pitch surfaces; 188 onchain members phrasing kept) |
 | Ecosystem Program email | Drafted, ready to send (outreach/ecosystem-program-email.md). R2 not open yet - send interest email now, application when open |
 | RFP-13 hub proposal | Drafted (outreach/community-hub-proposal.md). DEADLINE AUG 12. Blocked: co-organizers unconfirmed (AttaBotty, Ike, India via Shriyash/Arun) |
 | Outreach kit | 7 messages drafted, ZERO sent (Shriyash, Coop DM, /onchain-music cast, Juke + Magnetiq rail asks, ecosystem email) |
@@ -30,7 +30,6 @@ Written 2026-07-03 at session close. The build loop stops here; the next session
 
 1. Send the 7 drafted outreach messages (Shriyash/Arun first - India co-organizer + artist scouting)
 2. AttaBotty: photo/video archive ask (blocks reel, deck, gallery)
-3. Reconcile proof numbers (950 vs 735 battles etc) - then update pitch pages
 4. Approve rate card numbers
 5. Fix bettercallzaal.com (DNS ok - AWS 18.204.152.241; HTTPS dead; check AWS console)
 6. Decide Token2049 Singapore vs ADE Amsterdam by Jul 15

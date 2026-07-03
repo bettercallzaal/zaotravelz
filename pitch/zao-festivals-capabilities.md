@@ -14,7 +14,7 @@ Web3 conference, music conference, tech conference, streaming conference, media 
 | ZAO-CHELLA, Miami Art Basel 2024 | 10 artists, ~200 attendees, live onchain WaveWarZ battle, AR art installations, sponsor closed (Student $LOANZ) |
 | ZABAL Connector, ETH Boulder 2026 | Proof of Meet activation - QR connection tokens via Magnetiq |
 | COC Concertz | 150+ CONSECUTIVE weekly virtual concerts, simulcast across Spatial, X Spaces, Twitch, TikTok, YouTube |
-| WaveWarZ | 735 live music battles produced, $50-60K+ traded onchain, artists paid 1% of volume instantly |
+| WaveWarZ | 950 live music battles produced, $50-60K+ traded onchain, artists paid 1% of volume instantly |
 | Farcaster Agentic Bootcamp 2026 | 10-week educational program, 238+ participants, international |
 | ZAOstock, Oct 3 2026 | Maine's first crypto-native music festival - 500-1,000 target, town partnership, fiscal sponsorship (Fractured Atlas 501c3) |
 | ZAOVille, 2026 | Satellite festival, Virginia, co-produced with DCOOP - the franchise model in motion |
@@ -22,7 +22,7 @@ Web3 conference, music conference, tech conference, streaming conference, media 
 ## What we bring (repeatable services)
 
 1. **Artists on demand** - 22-artist roster, 378K+ combined Spotify monthly listeners, spanning hip-hop, trap-violin (Clejan: 289K monthly, toured with Lindsey Stirling, opened for Snoop Dogg and Busta Rhymes), EDM, R&B, Latin, acoustic, Caribbean. Plus allied houses: One Love Art DAO (600+ artists), COC network, WaveWarZ battle artists, Ohnahji University (100+ BIPOC creators).
-2. **Live onchain music battles** - our signature. Two artists, real-time audience voting + prediction market, instant onchain artist payouts. Nobody else runs this format live. 735 battles of production reps.
+2. **Live onchain music battles** - our signature. Two artists, real-time audience voting + prediction market, instant onchain artist payouts. Nobody else runs this format live. 950 battles of production reps.
 3. **Multi-platform simulcast** - 5 platforms at once (Spatial, X Spaces, Twitch, TikTok, YouTube), proven 150 consecutive weeks without missing.
 4. **Activations** - Proof of Meet QR badges (Magnetiq), NFT ticketing/collectibles (Manifold), token-gated experiences, gasless scavenger-hunt mechanics.
 5. **AR + interactive installations** - led by FailOften (NEA + Andy Warhol Foundation funded, NYU ITP, 25 years of interactive art).

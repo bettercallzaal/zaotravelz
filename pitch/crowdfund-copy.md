@@ -8,7 +8,7 @@ Send The ZAO to Devcon 8 Mumbai
 
 ## Campaign body
 
-Three years ago I started The ZAO to give independent musicians their profit margin, data, and IP rights back. Since then: 188 members onchain, 90+ straight weeks of governance, 735 WaveWarZ battles with $50-60K+ traded, 150+ weekly COC Concertz shows, four IRL festivals, 88 public repos. All of it bootstrapped from a day job in rural Maine. Zero VC.
+Three years ago I started The ZAO to give independent musicians their profit margin, data, and IP rights back. Since then: 188 members onchain, 90+ straight weeks of governance, 950 WaveWarZ battles with $50-60K+ traded, 150+ weekly COC Concertz shows, four IRL festivals, 88 public repos. All of it bootstrapped from a day job in rural Maine. Zero VC.
 
 Devcon 8 is in Mumbai this November. India is the next chapter: 50,000+ developers already connected through Apna Coding in ZABAL Games, and WaveWarZ is scouting Indian independent artists right now. I need to be in that room.
 
@@ -36,7 +36,7 @@ Buildathon kicked off at Ethereum Build Camp. Building [PROJECT]. Same thesis as
 Demoed [PROJECT] at Ethereum Build Camp demo day. [RESULT]. Next stop: Devcon 8 Mumbai, Nov 3-6. Crowdfund goes live Monday - full budget published, every dollar mapped.
 
 **Cast 4 - Jul 14 (launch):**
-It's live: Send The ZAO to Devcon 8 Mumbai. $1,500, fully itemized, visa already in hand, flying out of Boston. 188 members, 735 battles, 90+ weeks of governance - now let's open the India chapter. [crowdfund link]
+It's live: Send The ZAO to Devcon 8 Mumbai. $1,500, fully itemized, visa already in hand, flying out of Boston. 188 members, 950 battles, 90+ weeks of governance - now let's open the India chapter. [crowdfund link]
 
 **Cast 5+ - weekly updates:**
 Progress bar, new backers thanked by name, milestone unlocks (50% = extra YapZ episode from Mumbai, 100% = ETHGlobal Mumbai hackathon entry vlog).

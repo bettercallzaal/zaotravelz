@@ -7,7 +7,7 @@
 1. **Title.** The Year of the ZAO Festivals. 2027. One crew, every room that matters.
 2. **The problem.** Conferences need entertainment that fits their audience; independent musicians need rooms that pay. Nobody owns the layer between.
 3. **The thesis.** ZAO Festivals is the plug-in entertainment layer for the conference circuit: live onchain music battles, artist showcases, after-parties. We organize one flagship (ZAOstock); everywhere else we make YOUR event better.
-4. **The signature.** Live onchain battle: two artists, crowd votes by phone, market runs, artist paid before they leave the stage. 735 productions of reps. Nobody else has this.
+4. **The signature.** Live onchain battle: two artists, crowd votes by phone, market runs, artist paid before they leave the stage. 950 productions of reps. Nobody else has this.
 5. **Receipts.** PALOOZA (NFT NYC, 6-week assembly), CHELLA (Art Basel + AR + live battle), ETH Boulder activation, 150+ consecutive simulcast weeks, ZAOstock, Devcon 8 Mumbai. Photos/footage here.
 6. **The crew.** Zaal, AttaBotty (20 yrs production), FailOften (NEA + Warhol funded), DaNici, Candy, Hurric4n3Ike. Houses behind them: 22-artist roster (378K monthly listeners), One Love Art DAO (600+), Ohnahji (100+).
 7. **The 2027 circuit map.** Quarter-by-quarter graphic: ETHDenver, SXSW, EthCC, Token2049 Dubai, Consensus, FarCon, Wallifornia, VidCon, NFT.NYC, ETHIndia, ZAOstock 2027, Token2049 SG, ADE, Art Basel. 6-8 executed stops.

@@ -62,7 +62,7 @@ Target: Aug 1.
 
 ## Intake notes (Artizen session, 2026-07-03)
 
-- UPDATED PROOF NUMBERS (doc 919, newer than pitch pages): WaveWarZ 950 battles / 459 SOL / 7.8 SOL paid to artists; ZAO 0 to 250+ artists in 3 years; 100+ weekly governance meetings; 80+ repos. Pitch pages (docs/devcon8.html) still cite 735/472.71/188 - RECONCILE with Zaal before next send.
+- PROOF NUMBERS RECONCILED (Zaal confirmed 2026-07-03): WaveWarZ 950 battles (was 735 on pitch pages, fixed everywhere). Volume stays $50-60K+ (472+ SOL, both sources agree). Community phrasing stays 188 members onchain + 1,000+ ecosystem participants (verifiable); 250+ artists is a broader network claim, use only with Zaal's OK. Minor open: artist payouts, '1% of volume' vs 7.8 SOL total, confirm before quoting either. Sends UNBLOCKED.
 - New credential: Zaal won FarHack 2026 Snap category.
 - Pitch patterns that tested well: place-first framing, proven-organizer table early, recurring-series framing ("Year N of the annual circuit"), budget transparency, outbound max ~7 lines ONE ask.
 - Spelling: ZAO-PALOOZA, ZAO-CHELLA - hyphenated all caps, always.

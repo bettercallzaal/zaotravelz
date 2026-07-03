@@ -9,7 +9,7 @@ Devcon 8 is Ethereum's global gathering: 12,000+ attendees, 700+ speakers, Jio W
 Zaal Panthaki builds onchain infrastructure for independent musicians. Not plans - shipped systems:
 
 - **The ZAO** - decentralized impact network returning profit margin, data, and IP rights to independent artists. 188 members onchain (Base), 1,000+ ecosystem participants, 90+ consecutive weeks of fractal governance. Zero smart contract exploits.
-- **WaveWarZ** - first global onchain music prediction market (Solana). 735 live battles, $50-60K+ trading volume. Artists earn 1% of all volume, instantly.
+- **WaveWarZ** - first global onchain music prediction market (Solana). 950 live battles, $50-60K+ trading volume. Artists earn 1% of all volume, instantly.
 - **COC Concertz** - 150+ consecutive weekly virtual concerts across Spatial, X Spaces, Twitch, TikTok, YouTube.
 - **ZAO Festivals** - ZAO-PALOOZA (NFT NYC, 12 artists), ZAO-CHELLA (Miami Art Basel, 10 artists), ZAO-PROS (ETH Denver), and ZAOstock 2026 (Oct 3, Ellsworth Maine - three weeks before Devcon).
 - **Builder receipts** - 88 public GitHub repos, every major project pushed within the last 7 days. 400+ newsletter editions, 78 paid supporters, 22-artist roster with 378K+ combined Spotify monthly listeners.
