@@ -13,9 +13,9 @@ Update this file per touch. One row per event partnership.
 | ETHGlobal Mumbai | Nov 6-8 | Live battle at hackathon / closing party slot | ethglobal.com; Liam Horne, Josh Stark | IDEA | Register; pitch after hub decision | Zaal |
 | Token2049 Singapore | Oct 7-8 | AFTER 2049 side event w/ partner venue | token2049.com partnerships | IDEA | Decide vs ADE by Jul 15 (ZAOstock Oct 3 conflict check) | Zaal |
 | ADE Amsterdam | Oct 21-25 | Web3 music battle slot w/ DGTL co-programming | amsterdam-dance-event.nl + DGTL | IDEA | Decide vs Token2049 by Jul 15 | Zaal |
-| Art Basel Miami crypto week | Dec 2-7 | ZAO-CHELLA sequel w/ venue partner (Refraction model) | Crypto Nomads, BitBasel | IDEA | Outreach Sept; lean on 2024 CHELLA receipts | Zaal |
+| Art Basel Miami crypto week | Dec 2-7 | ZAO-CHELLA sequel w/ venue partner (Refraction model) | Crypto Nomads, BitBasel | IDEA | Outreach Sept. Verified receipts (doc 919/364): ZAO-CHELLA Dec 6 2024 Wynwood, 10 artists, AR art, 4pm-11pm run of show, organized AttaBotty + DaNici, Gold sponsor Student $LOANZ. Visual proof: @zaofestivals IG (65 posts) - Zaal must screenshot engagement (login-walled) | Zaal |
 | Web Summit Lisbon | Nov 9-12 | Night Summit slot | websummit.com | IDEA | Low priority; only if Devcon momentum spills | - |
-| NFT.NYC | Sep 1-3 | Side-event battle night | nft.nyc/sponsor + side-event circuit | IDEA | Only if NYC crew available; PALOOZA venue contacts | AttaBotty? |
+| NFT.NYC | Sep 1-3 | Side-event battle night | nft.nyc/sponsor + side-event circuit | IDEA | Only if NYC crew available. NOTE: ZAO-PALOOZA exact 2024 date + venue UNCONFIRMED - ask Zaal before citing | AttaBotty? |
 
 ## 2027 circuit
 
@@ -46,6 +46,9 @@ Update this file per touch. One row per event partnership.
 | Apna Coding (Shriyash) | India intros + dev audience | LIVE partner | Ask THIS WEEK for Devcon-adjacent intros |
 | Arpeggi Labs | Onchain music creation demos at hubs | IDEA | Reach out pre-Devcon |
 | Fractured Atlas | Fiscal sponsorship (tax-deductible circuit sponsors) | LIVE | Confirm scope covers non-ZAOstock activity |
+| Artizen | Crowdfund rail: ZAO Festivals LIVE on Season 6 ($25k goal, finale ~Jul 9); ZAO also runs a $10k fund there | LIVE | Submit "ZAO Travelz" (artist travel to 2026-27 circuit) to Season 7; playbooks in ZAOartizen repo |
+| Arun Phillips (DreamStarter) | WaveWarZ India lead, ZABAL Games presenter, top ZAO Fund supporter | LIVE | FIRST CALL for anything India |
+| DDAN (Kshitij Garg + Rishabh, Delhi) | Pop-up community stays; already discussed Devcon India LODGING + music-house partnership (doc 810) | IN CONVO | Revive convo - could solve Mumbai crew lodging |
 
 ## Collateral gate (blocks all outreach past CONTACTED)
 
@@ -54,5 +57,13 @@ Update this file per touch. One row per event partnership.
 - [ ] Photo gallery (PALOOZA + CHELLA - ask AttaBotty for archive)
 - [x] Tech rider - collateral/tech-rider.md (v1 template)
 - [ ] Insurance cert
-- [ ] 2-3 host testimonials
+- [ ] 2-3 host testimonials - warm targets (Artizen intake): WaveWarZ crew, Moses (Poly Raiders), Gneric (Heritage Collection), KOSBAAR (The Creator Block)
 Target: Aug 1.
+
+## Intake notes (Artizen session, 2026-07-03)
+
+- UPDATED PROOF NUMBERS (doc 919, newer than pitch pages): WaveWarZ 950 battles / 459 SOL / 7.8 SOL paid to artists; ZAO 0 to 250+ artists in 3 years; 100+ weekly governance meetings; 80+ repos. Pitch pages (docs/devcon8.html) still cite 735/472.71/188 - RECONCILE with Zaal before next send.
+- New credential: Zaal won FarHack 2026 Snap category.
+- Pitch patterns that tested well: place-first framing, proven-organizer table early, recurring-series framing ("Year N of the annual circuit"), budget transparency, outbound max ~7 lines ONE ask.
+- Spelling: ZAO-PALOOZA, ZAO-CHELLA - hyphenated all caps, always.
+- Steve Peer: 430 house concerts since 1989 - the Maine tradition line for ZAOstock copy.
