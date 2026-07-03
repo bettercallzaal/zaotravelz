@@ -1,0 +1,331 @@
+<title>Send The ZAO to Devcon 8 Mumbai</title>
+<style>
+  :root {
+    --ink: #151A32;
+    --ink-2: #1E2440;
+    --paper: #F6F2E7;
+    --paper-2: #EFE9DA;
+    --marigold: #EFA31D;
+    --marigold-deep: #C77F0A;
+    --teal: #2A7E76;
+    --slate: #8A8FA3;
+    --line: rgba(21,26,50,0.16);
+
+    --bg: var(--ink);
+    --bg-raise: var(--ink-2);
+    --fg: var(--paper);
+    --fg-mute: #B9BCCB;
+    --rule: rgba(246,242,231,0.16);
+    --accent: var(--marigold);
+    --accent-ink: #10142A;
+    --tealline: #4BA79E;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: var(--paper);
+      --bg-raise: #FFFFFF;
+      --fg: var(--ink);
+      --fg-mute: #4A5068;
+      --rule: var(--line);
+      --accent: var(--marigold-deep);
+      --accent-ink: #FFFFFF;
+      --tealline: var(--teal);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: var(--ink);
+    --bg-raise: var(--ink-2);
+    --fg: var(--paper);
+    --fg-mute: #B9BCCB;
+    --rule: rgba(246,242,231,0.16);
+    --accent: var(--marigold);
+    --accent-ink: #10142A;
+    --tealline: #4BA79E;
+  }
+  :root[data-theme="light"] {
+    --bg: var(--paper);
+    --bg-raise: #FFFFFF;
+    --fg: var(--ink);
+    --fg-mute: #4A5068;
+    --rule: var(--line);
+    --accent: var(--marigold-deep);
+    --accent-ink: #FFFFFF;
+    --tealline: var(--teal);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Charter, Georgia, 'Times New Roman', serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .display, h1, h2, .tier-name {
+    font-family: 'Avenir Next Condensed', 'HelveticaNeue-CondensedBold', 'Arial Narrow', 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+  .mono { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; }
+  .eyebrow {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.18em;
+    color: var(--accent);
+  }
+  main { max-width: 880px; margin: 0 auto; padding: 0 24px 96px; }
+
+  /* Boarding pass hero */
+  .pass {
+    margin-top: 40px;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--bg-raise);
+  }
+  .pass-route {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; padding: 20px 28px;
+    border-bottom: 1px dashed var(--rule);
+  }
+  .pass-route .code { font-size: clamp(40px, 8vw, 64px); line-height: 1; }
+  .pass-route .city { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-mute); }
+  .route-line { flex: 1; display: flex; align-items: center; gap: 8px; }
+  .route-line .track { flex: 1; border-top: 2px dashed var(--accent); }
+  .route-line .plane {
+    font-family: ui-monospace, Menlo, monospace; font-size: 11px;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);
+    white-space: nowrap;
+  }
+  .pass-meta {
+    display: flex; flex-wrap: wrap; gap: 24px 40px;
+    padding: 14px 28px; font-size: 13px;
+  }
+  .pass-meta .k { color: var(--fg-mute); text-transform: uppercase; letter-spacing: 0.12em; font-size: 11px; display: block; }
+
+  h1 {
+    font-size: clamp(44px, 9vw, 84px);
+    line-height: 0.98;
+    text-transform: uppercase;
+    margin: 56px 0 16px;
+    text-wrap: balance;
+  }
+  h1 .gold { color: var(--accent); }
+  .lede { font-size: 21px; max-width: 60ch; color: var(--fg-mute); margin: 0 0 8px; }
+  .lede strong { color: var(--fg); }
+
+  h2 {
+    font-size: 28px; text-transform: uppercase;
+    margin: 72px 0 20px; padding-top: 20px;
+    border-top: 3px solid var(--accent);
+    display: inline-block;
+  }
+  section > p { max-width: 65ch; }
+
+  /* Stat wall */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 8px; }
+  .stat {
+    background: var(--bg-raise); border: 1px solid var(--rule);
+    border-radius: 6px; padding: 18px 18px 14px;
+  }
+  .stat .n { font-size: 34px; line-height: 1.1; font-weight: 700; }
+  .stat .l { font-size: 13px; color: var(--fg-mute); margin-top: 4px; line-height: 1.35; }
+
+  blockquote {
+    margin: 32px 0; padding: 20px 26px;
+    border-left: 4px solid var(--accent);
+    background: var(--bg-raise);
+    border-radius: 0 6px 6px 0;
+    font-size: 18px; font-style: italic; max-width: 62ch;
+  }
+  blockquote cite { display: block; margin-top: 10px; font-style: normal; font-size: 14px; color: var(--fg-mute); }
+
+  /* Tiers */
+  .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .tier {
+    border: 1px solid var(--rule); border-radius: 6px;
+    background: var(--bg-raise); padding: 22px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .tier.partner { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+  .tier-name { font-size: 22px; text-transform: uppercase; }
+  .tier-price { font-size: 34px; font-weight: 700; }
+  .tier ul { margin: 0; padding-left: 18px; font-size: 15px; color: var(--fg-mute); }
+  .tier li { margin: 6px 0; }
+  .tier li::marker { color: var(--accent); }
+
+  /* Tables */
+  .tablewrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg-raise); }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; }
+  th {
+    text-align: left; font-family: ui-monospace, Menlo, monospace;
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--fg-mute); padding: 12px 16px; border-bottom: 1px solid var(--rule);
+  }
+  td { padding: 11px 16px; border-bottom: 1px solid var(--rule); }
+  tr:last-child td { border-bottom: none; }
+  td.num { text-align: right; }
+  tr.total td { font-weight: 700; border-top: 2px solid var(--accent); }
+
+  /* Timeline */
+  ol.timeline { list-style: none; margin: 0; padding: 0; }
+  ol.timeline li {
+    display: grid; grid-template-columns: 120px 1fr; gap: 16px;
+    padding: 12px 0; border-bottom: 1px dashed var(--rule);
+  }
+  ol.timeline .when { color: var(--accent); font-family: ui-monospace, Menlo, monospace; font-size: 13px; padding-top: 3px; }
+
+  .deliv { max-width: 65ch; padding-left: 20px; }
+  .deliv li { margin: 10px 0; }
+  .deliv li::marker { color: var(--accent); }
+
+  footer {
+    margin-top: 80px; padding: 28px;
+    border: 1px solid var(--rule); border-radius: 6px;
+    background: var(--bg-raise);
+  }
+  footer .big { font-size: 24px; font-weight: 700; }
+  footer a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  footer a:focus-visible, a:focus-visible { outline: 2px solid var(--tealline); outline-offset: 2px; }
+  .contact-row { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 12px; font-size: 15px; }
+
+  @media (max-width: 560px) {
+    .pass-route { flex-direction: column; align-items: stretch; text-align: center; }
+    ol.timeline li { grid-template-columns: 1fr; gap: 2px; }
+  }
+</style>
+
+<main>
+  <div class="pass" role="img" aria-label="Boarding pass style route from Boston to Mumbai">
+    <div class="pass-route">
+      <div><span class="display code">BOS</span><span class="city">Boston Logan</span></div>
+      <div class="route-line"><span class="track"></span><span class="plane">Devcon 8 &middot; Nov 3&ndash;6, 2026</span><span class="track"></span></div>
+      <div style="text-align:right"><span class="display code">BOM</span><span class="city">Mumbai &middot; Jio World Centre, BKC</span></div>
+    </div>
+    <div class="pass-meta mono">
+      <span><span class="k">Passenger</span>PANTHAKI / ZAAL (BETTERCALLZAAL)</span>
+      <span><span class="k">Visa</span>IN HAND</span>
+      <span><span class="k">Second leg</span>ETHGLOBAL MUMBAI &middot; NOV 6&ndash;8</span>
+      <span><span class="k">Funding target</span>$1,500</span>
+    </div>
+  </div>
+
+  <h1>Send The ZAO<br>to <span class="gold">Devcon 8</span> Mumbai</h1>
+  <p class="lede">Devcon is Ethereum's global gathering: <strong>12,000+ attendees, 700+ speakers.</strong> The ZAO is going to open its India chapter there - a bootstrapped, zero-VC music network built from rural Maine, funded by a day job and, this November, by you.</p>
+
+  <section>
+    <h2>The receipts</h2>
+    <p>Not plans. Shipped systems, all public, all verifiable.</p>
+    <div class="stats mono">
+      <div class="stat"><div class="n">188</div><div class="l">ZAO members onchain (Base), 1,000+ ecosystem participants</div></div>
+      <div class="stat"><div class="n">90+</div><div class="l">consecutive weeks of fractal governance, zero missed</div></div>
+      <div class="stat"><div class="n">735</div><div class="l">WaveWarZ live battles, $50-60K+ traded on Solana</div></div>
+      <div class="stat"><div class="n">150+</div><div class="l">consecutive weekly COC Concertz virtual shows</div></div>
+      <div class="stat"><div class="n">88</div><div class="l">public GitHub repos, every major project pushed this week</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">IRL festivals produced: NFT NYC, Art Basel Miami, ETH Denver, ZAOstock 2026</div></div>
+      <div class="stat"><div class="n">378K+</div><div class="l">combined Spotify monthly listeners across a 22-artist roster</div></div>
+      <div class="stat"><div class="n">0</div><div class="l">smart contract exploits, ever</div></div>
+    </div>
+    <blockquote>
+      "Zaal helped build and scale WaveWarZ to over $60k+ in volume with a completely new music model... Without Zaal WaveWarZ would not be dominating Web 3 Music the way it is now. This is your GUY."
+      <cite>Hurric4n3IKE, founder, WaveWarZ</cite>
+    </blockquote>
+  </section>
+
+  <section>
+    <h2>Why India, why now</h2>
+    <p>India is already in The ZAO's pipeline. Apna Coding - 50,000+ Indian developers - presents inside ZABAL Games. WaveWarZ is actively scouting Indian independent artists for onchain battles. Devcon 8's "Real World Ethereum" thesis is this project's exact lane: real artists, real revenue, real IP rights, onchain.</p>
+    <p>One flight covers two events: Devcon (Nov 3-6) and the ETHGlobal Mumbai hackathon (Nov 6-8), in the same BKC complex.</p>
+  </section>
+
+  <section>
+    <h2>Sponsor tiers</h2>
+    <div class="tiers">
+      <div class="tier">
+        <span class="tier-name">Supporter</span>
+        <span class="tier-price mono">$250</span>
+        <ul>
+          <li>Name or logo in every trip recap (newsletter, 400+ editions published)</li>
+          <li>Thank-you cast to 5,000+ Farcaster followers</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <span class="tier-name">Backer</span>
+        <span class="tier-price mono">$500</span>
+        <ul>
+          <li>Everything in Supporter</li>
+          <li>Logo on daily Devcon floor coverage, Farcaster and X</li>
+          <li>Mention in BCZ YapZ Mumbai podcast episodes</li>
+        </ul>
+      </div>
+      <div class="tier partner">
+        <span class="tier-name">Partner</span>
+        <span class="tier-price mono">$1,000+</span>
+        <ul>
+          <li>Everything in Backer</li>
+          <li>Dedicated YapZ segment</li>
+          <li>Named intros from Devcon and ETHGlobal contacts relevant to you</li>
+          <li>WaveWarZ India artist-pipeline reporting</li>
+          <li>Stage mention at ZAOstock 2026 (Oct 3, Maine)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Every dollar, itemized</h2>
+    <p>The full budget is public. Overage rolls into ZAOstock 2026 production - stated here so nobody wonders where extra money goes.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Line item</th><th style="text-align:right">Low</th><th style="text-align:right">Mid</th><th style="text-align:right">High</th></tr></thead>
+        <tbody class="mono">
+          <tr><td>Flights, round trip BOS to BOM</td><td class="num">$420</td><td class="num">$650</td><td class="num">$850</td></tr>
+          <tr><td>Lodging, 5 nights near BKC</td><td class="num">$100</td><td class="num">$250</td><td class="num">$400</td></tr>
+          <tr><td>Food, 5 days</td><td class="num">$40</td><td class="num">$75</td><td class="num">$120</td></tr>
+          <tr><td>Local transport</td><td class="num">$10</td><td class="num">$15</td><td class="num">$25</td></tr>
+          <tr><td>Devcon ticket (builder / GA)</td><td class="num">$349</td><td class="num">$349</td><td class="num">$699</td></tr>
+          <tr><td>Buffer</td><td class="num">$50</td><td class="num">$100</td><td class="num">$200</td></tr>
+          <tr class="total"><td>Total</td><td class="num">$969</td><td class="num">$1,439</td><td class="num">$2,294</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:14px; color:var(--fg-mute)">Visa: already obtained and paid. Ask is set at $1,500, the mid case plus a small buffer.</p>
+  </section>
+
+  <section>
+    <h2>What you get back</h2>
+    <ol class="deliv">
+      <li>Daily coverage from the Devcon floor - casts, threads, photos - all four days, plus ETHGlobal Mumbai.</li>
+      <li>Two or more BCZ YapZ podcast episodes recorded in Mumbai: builder interviews, the India music-tech scene.</li>
+      <li>Full written recap to the newsletter list and the public, MIT-licensed ZAO research library (900+ documents).</li>
+      <li>Named introductions: every sponsor gets at least one relevant contact from the trip.</li>
+      <li>WaveWarZ India: a scouting report on Indian independent artists for onchain battles.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Road to Mumbai</h2>
+    <ol class="timeline">
+      <li><span class="when">JUL 4-11</span><span>Ethereum Build Camp (supported by Devcon) - shipping a project, demo day Jul 11</span></li>
+      <li><span class="when">JUL</span><span>Devcon Builder Discount application + crowdfund launch</span></li>
+      <li><span class="when">AUG</span><span>Devcon Scholars application, community hub proposal</span></li>
+      <li><span class="when">OCT 3</span><span>ZAOstock 2026, Ellsworth Maine - sponsors welcome on site</span></li>
+      <li><span class="when">EARLY OCT</span><span>Flights booked, BOS to BOM</span></li>
+      <li><span class="when">NOV 3-6</span><span>Devcon 8, Jio World Centre, Mumbai</span></li>
+      <li><span class="when">NOV 6-8</span><span>ETHGlobal Mumbai hackathon, same complex</span></li>
+    </ol>
+  </section>
+
+  <footer>
+    <div class="big">Got a problem? BetterCallZaal.<br>Got $250? Send a builder to Mumbai.</div>
+    <p style="max-width:60ch">Sponsorships accepted in USDC, ETH, SOL, or fiat. Custom amounts and custom packages welcome.</p>
+    <div class="contact-row mono">
+      <span><a href="mailto:zaal@thezao.com">zaal@thezao.com</a></span>
+      <span>Farcaster <a href="https://warpcast.com/zaal">@zaal</a></span>
+      <span>X <a href="https://x.com/bettercallzaal">@bettercallzaal</a></span>
+      <span><a href="https://thezao.com">thezao.com</a></span>
+      <span><a href="https://nexus.thezao.com">nexus.thezao.com</a></span>
+      <span><a href="https://github.com/bettercallzaal">github.com/bettercallzaal</a></span>
+    </div>
+  </footer>
+</main>
