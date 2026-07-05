@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 2027 Circuit - Year of the ZAO Festivals</title>
+<style>
+  :root {
+    --ink: #151A32; --ink-2: #1E2440; --paper: #F6F2E7;
+    --marigold: #EFA31D; --marigold-deep: #C77F0A; --teal: #2A7E76;
+    --red: #C0392B; --green: #2E8B57;
+
+    --bg: var(--ink); --bg-raise: var(--ink-2); --fg: var(--paper);
+    --fg-mute: #B9BCCB; --rule: rgba(246,242,231,0.16);
+    --accent: var(--marigold); --good: #4BB98A; --bad: #E06050; --warn: var(--marigold);
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: var(--paper); --bg-raise: #FFFFFF; --fg: var(--ink); --fg-mute: #4A5068;
+      --rule: rgba(21,26,50,0.16); --accent: var(--marigold-deep); --good: var(--green); --bad: var(--red); --warn: var(--marigold-deep); }
+  }
+  :root[data-theme="dark"] { --bg: var(--ink); --bg-raise: var(--ink-2); --fg: var(--paper); --fg-mute: #B9BCCB;
+    --rule: rgba(246,242,231,0.16); --accent: var(--marigold); --good: #4BB98A; --bad: #E06050; --warn: var(--marigold); }
+  :root[data-theme="light"] { --bg: var(--paper); --bg-raise: #FFFFFF; --fg: var(--ink); --fg-mute: #4A5068;
+    --rule: rgba(21,26,50,0.16); --accent: var(--marigold-deep); --good: var(--green); --bad: var(--red); --warn: var(--marigold-deep); }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+    font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 14px; line-height: 1.5; }
+  main { max-width: 960px; margin: 0 auto; padding: 32px 20px 80px; }
+  a { color: var(--accent); }
+  .back { display: inline-block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--fg-mute); text-decoration: none; margin-bottom: 20px; }
+  .back:hover { color: var(--accent); }
+  h1 { font-family: 'Avenir Next Condensed', 'Arial Narrow', sans-serif; font-weight: 700;
+    font-size: clamp(30px, 6vw, 46px); text-transform: uppercase; margin: 0 0 4px; letter-spacing: 0.01em; }
+  h1 .gold { color: var(--accent); }
+  .sub { color: var(--fg-mute); margin: 0 0 24px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent);
+    border-top: 2px solid var(--accent); display: inline-block; padding-top: 8px; margin: 36px 0 12px; }
+  h2 .q { color: var(--fg-mute); font-weight: 400; letter-spacing: 0.08em; }
+
+  .rule-banner { background: var(--bg-raise); border: 1px solid var(--rule); border-left: 3px solid var(--accent);
+    border-radius: 6px; padding: 14px 16px; margin: 0 0 8px; }
+  .rule-banner strong { color: var(--accent); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
+  .card { background: var(--bg-raise); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; }
+  .card .k { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--fg-mute); }
+  .card .v { font-size: 22px; font-weight: 700; margin-top: 2px; }
+  .card .d { font-size: 12px; color: var(--fg-mute); margin-top: 4px; }
+
+  .pill { display: inline-block; padding: 1px 9px; border-radius: 99px; font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; }
+  .pill.own   { background: color-mix(in srgb, var(--teal) 22%, transparent); color: var(--teal); border: 1px solid var(--teal); }
+  .pill.prio  { background: var(--accent); color: var(--ink); border: 1px solid var(--accent); }
+  .pill.watch { background: color-mix(in srgb, var(--warn) 18%, transparent); color: var(--warn); border: 1px solid var(--warn); }
+  .pill.idea  { background: color-mix(in srgb, var(--fg-mute) 14%, transparent); color: var(--fg-mute); border: 1px solid var(--fg-mute); }
+
+  .tablewrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg-raise); margin-bottom: 6px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; min-width: 720px; }
+  th { text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--fg-mute);
+    padding: 9px 12px; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+  td { padding: 9px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  td .ev { font-weight: 700; }
+  td .fmt { color: var(--fg-mute); }
+  td.when { white-space: nowrap; }
+  td.by { white-space: nowrap; color: var(--accent); font-weight: 700; font-size: 12px; }
+  td.by.soft { color: var(--fg-mute); font-weight: 400; }
+  td .path { font-size: 11px; color: var(--fg-mute); word-break: break-word; }
+
+  ul.legend { list-style: none; padding: 0; margin: 6px 0 0; font-size: 12px; color: var(--fg-mute);
+    display: flex; flex-wrap: wrap; gap: 6px 18px; }
+  ul.legend li { display: flex; align-items: center; gap: 7px; }
+
+  ul.actions { list-style: none; padding: 0; margin: 0; }
+  ul.actions li { padding: 9px 12px; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg-raise);
+    margin-bottom: 8px; display: flex; gap: 10px; align-items: baseline; }
+  ul.actions .n { color: var(--accent); font-weight: 700; }
+  .foot { margin-top: 40px; color: var(--fg-mute); font-size: 12px; }
+</style>
+</head>
+<body>
+
+<main>
+  <a class="back" href="index.html">&larr; Campaign HQ</a>
+  <h1>The <span class="gold">2027 Circuit</span></h1>
+  <p class="sub">The campaign spine. Every room The ZAO can plug a music stage, a live WaveWarZ battle, or an artist showcase into across 2027, mapped by quarter with dates, application windows, pitch angle, and the door to get in.</p>
+
+  <div class="rule-banner">
+    <strong>Operating rule (locked):</strong> The ZAO ORGANIZES exactly one event, ZAOstock, the flagship. Every other stop is a PARTNERSHIP. We are the entertainment layer we bring, never the competing organizer. This keeps the crew light, the calendar survivable, and turns every conference into an ally.
+  </div>
+
+  <h2>The year at a glance</h2>
+  <div class="grid">
+    <div class="card"><span class="k">Stops mapped</span><div class="v">16</div><div class="d">1 we organize (ZAOstock), 15 partnership targets. Realistic execution: 6 to 8 with the T-45 playbook each.</div></div>
+    <div class="card"><span class="k">Next hard deadline</span><div class="v">Dec 18 2026</div><div class="d">SXSW 2027 artist showcase decisions. Submit Aug to Sep 2026. Longest lead on the board.</div></div>
+    <div class="card"><span class="k">Density windows</span><div class="v">Apr, Oct</div><div class="d">Apr 2027 (EthCC, NAB, Consensus, Music Biz) and Oct 2027 (ZAOstock, Token2049 SG, ADE) run hot.</div></div>
+    <div class="card"><span class="k">Anchor rhythm</span><div class="v">1 + 1-2</div><div class="d">Per quarter: 1 anchor activation plus 1 to 2 light-touch showcases. Do not overbook.</div></div>
+  </div>
+
+  <h2>Q1 <span class="q">North America warm-up</span></h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Event</th><th>Dates</th><th>Apply by</th><th>Pitch angle</th><th>Door</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="ev">SXSW Austin</span></td>
+        <td class="when">Mar 15-21</td>
+        <td class="by">Submit Aug-Sep 2026</td>
+        <td class="fmt">Official artist showcase (ZAO roster) plus a side battle night. The original showcase conference.</td>
+        <td class="path">cart.sxsw.com/products/bandapp. Apps open Jun 23 2026, decisions by Dec 18 2026.</td>
+        <td><span class="pill prio">Priority</span></td>
+      </tr>
+      <tr>
+        <td><span class="ev">ETHDenver</span></td>
+        <td class="when">Feb (mid)</td>
+        <td class="by">Watch ~Oct 2026</td>
+        <td class="fmt">Creator application, BUIDL City battle stage plus a multi-venue nightly residency. Music is fully integrated here.</td>
+        <td class="path">ethdenver.com/creator. Watch for the app opening.</td>
+        <td><span class="pill watch">Watching</span></td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <h2>Q2 <span class="q">the heavy quarter</span></h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Event</th><th>Dates</th><th>Apply by</th><th>Pitch angle</th><th>Door</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="ev">EthCC[10] Cannes</span></td>
+        <td class="when">Apr 5-8</td>
+        <td class="by">Portal opens early 2027</td>
+        <td class="fmt">EthCC Week side event: a multi-venue music residency. 250+ community side events, music precedent already exists.</td>
+        <td class="path">ethcc.io week side-event portal (Luma aggregates all).</td>
+        <td><span class="pill idea">Target</span></td>
+      </tr>
+      <tr>
+        <td><span class="ev">Consensus Miami</span></td>
+        <td class="when">May 4-6</td>
+        <td class="by soft">Pitch Q1 2027</td>
+        <td class="fmt">Pioneer the entertainment track. No official one exists, so we propose the "Music + Web3" after-party. 15-20k decision-makers.</td>
+        <td class="path">consensus.coindesk.com sponsorship. Bring the 2026 reel.</td>
+        <td><span class="pill idea">Target</span></td>
+      </tr>
+      <tr>
+        <td><span class="ev">Token2049 Dubai</span></td>
+        <td class="when">Apr 21-22</td>
+        <td class="by soft">After SG relationship</td>
+        <td class="fmt">AFTER 2049 party partner. Follows naturally if the Oct Singapore slot lands.</td>
+        <td class="path">token2049.com partnerships.</td>
+        <td><span class="pill idea">Target</span></td>
+      </tr>
+      <tr>
+        <td><span class="ev">FarCon</span></td>
+        <td class="when">Spring (TBA)</td>
+        <td class="by">Watch farcon.xyz</td>
+        <td class="fmt">Farcaster-native battle plus a Coop Records / Sonata collab. Home turf for the FC audience.</td>
+        <td class="path">farcon.xyz, plus @coopahtroopa (the Coop DM doubles as the FarCon seed).</td>
+        <td><span class="pill idea">Target</span></td>
+      </tr>
+      <tr>
+        <td><span class="ev">NAB Show Las Vegas</span></td>
+        <td class="when">Apr 4-7</td>
+        <td class="by soft">Low priority</td>
+        <td class="fmt">Streaming and broadcast industry. The onchain-simulcast story. Only if the quarter has room.</td>
+        <td class="path">nabshow.com exhibit and sponsorship.</td>
+        <td><span class="pill idea">Target</span></td>
+      </tr>
+      <tr>
+        <td><span class="ev">Music Biz San Diego</span></td>
+        <td class="when">May (TBA)</td>
+        <td class="by soft">Apply Q1 2027</td>
+        <td class="fmt">B2B music industry room. Independent-artist economics as the talk track, not a stage.</td>
+        <td class="path">musicbiz.org events page.</td>
+        <td><span class="pill idea">Target</span></td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <h2>Q3 <span class="q">creator and music tech</span></h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Event</th><th>Dates</th><th>Apply by</th><th>Pitch angle</th><th>Door</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="ev">Wallifornia MusicTech</span></td>
+        <td class="when">Jul, Liege BE</td>
+        <td class="by soft">Apply Q1 2027</td>
+        <td class="fmt">Summit slot plus a launch-party set. Strongest thematic fit on the board (music tech is the whole event).</td>
+        <td class="path">walliforniamusictech.com applications.</td>
+        <td><span class="pill idea">Target</span></td>
+      </tr>
+      <tr>
+        <td><span class="ev">VidCon Anaheim</span></td>
+        <td class="when">Jul 8-10</td>
+        <td class="by">When 2027 apps open</td>
+        <td class="fmt">Featured creator plus a live battle show. Creator culture is the entertainment, music creators feature prominently.</td>
+        <td class="path">vidcon.com Featured Creator applications.</td>
+        <td><span class="pill watch">Watching</span></td>
+      </tr>
+      <tr>
+        <td><span class="ev">ETHIndia Bangalore</span></td>
+        <td class="when">Sep</td>
+        <td class="by soft">Seed at Devcon 8</td>
+        <td class="fmt">Battle night, leveraging the Devcon India relationships (Arun, Shriyash, DDAN) built in person Nov 2026.</td>
+        <td class="path">ethindia.co, Devfolio.</td>
+        <td><span class="pill idea">Target</span></td>
+      </tr>
+      <tr>
+        <td><span class="ev">NFT.NYC</span></td>
+        <td class="when">Sep</td>
+        <td class="by soft">After 2026 edition</td>
+        <td class="fmt">Return with 2026 receipts. Side-event battle night during NYC Art Week (100+ side events, strong music precedent).</td>
+        <td class="path">nft.nyc/sponsor plus the organic side-event circuit.</td>
+        <td><span class="pill idea">Target</span></td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <h2>Q4 <span class="q">the anchor run</span></h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Event</th><th>Dates</th><th>Apply by</th><th>Pitch angle</th><th>Door</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="ev">ZAOstock 2027</span></td>
+        <td class="when">Oct</td>
+        <td class="by soft">Ours to run</td>
+        <td class="fmt">Year two of the flagship, the circuit's home date. The only event The ZAO organizes. Everything else references it.</td>
+        <td class="path">Internal. Steve Peer co-curates (430 house concerts since 1989).</td>
+        <td><span class="pill own">We organize</span></td>
+      </tr>
+      <tr>
+        <td><span class="ev">Token2049 Singapore</span></td>
+        <td class="when">Oct</td>
+        <td class="by soft">Book from 2026 rel.</td>
+        <td class="fmt">Year-two return. AFTER 2049 side event with a partner venue, a 3-hour live battle format. 25k+ attendees, 1,000+ side parties.</td>
+        <td class="path">token2049.com partnerships plus community side-event boards.</td>
+        <td><span class="pill idea">Target</span></td>
+      </tr>
+      <tr>
+        <td><span class="ev">ADE Amsterdam</span></td>
+        <td class="when">Oct 21-25</td>
+        <td class="by soft">Official apps open</td>
+        <td class="fmt">Web3 music battle slot with DGTL co-programming. Decentralized venue model fits our plug-in approach, a 3-night residency.</td>
+        <td class="path">amsterdam-dance-event.nl official apps, plus DGTL.</td>
+        <td><span class="pill idea">Target</span></td>
+      </tr>
+      <tr>
+        <td><span class="ev">Art Basel Miami</span></td>
+        <td class="when">Dec</td>
+        <td class="by soft">Book from Dec 2026</td>
+        <td class="fmt">Third Basel appearance, the residency narrative. A ZAO-CHELLA sequel with a venue partner (Refraction model).</td>
+        <td class="path">Crypto Nomads aggregator, BitBasel, Wynwood gallery partnerships.</td>
+        <td><span class="pill idea">Target</span></td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <ul class="legend">
+    <li><span class="pill own">We organize</span> the one event The ZAO runs</li>
+    <li><span class="pill prio">Priority</span> longest lead, act first</li>
+    <li><span class="pill watch">Watching</span> application window not open yet</li>
+    <li><span class="pill idea">Target</span> partnership target, outreach ahead</li>
+  </ul>
+
+  <h2>What has to happen in 2026 to make 2027 real</h2>
+  <ul class="actions">
+    <li><span class="n">1</span><span>Submit the SXSW 2027 showcase application (Aug-Sep 2026). Longest lead, closes Dec 18 2026, the Q1 anchor.</span></li>
+    <li><span class="n">2</span><span>Close the collateral kit by Aug 1: rate card, 3-min reel, photo gallery, tech rider, insurance cert, testimonials. Every 2027 pitch needs it.</span></li>
+    <li><span class="n">3</span><span>Execute and document ZAOstock Oct 3 2026. Photo and video crew booked now. It is the case study the whole 2027 circuit sells.</span></li>
+    <li><span class="n">4</span><span>Land the Devcon 8 activation and Mumbai footage (Nov 2026). International proof plus the India artist pipeline for ETHIndia and Token2049 SG.</span></li>
+    <li><span class="n">5</span><span>Watch the ETHDenver creator app (~Oct 2026). The Q1 opener, apply the day it opens.</span></li>
+    <li><span class="n">6</span><span>Ship the "Sponsor the circuit, not an event" season deck (Nov 2026). Season sponsorship beats per-event begging (Refraction pass model).</span></li>
+  </ul>
+
+  <h2>How the year gets funded</h2>
+  <div class="grid">
+    <div class="card"><span class="k">Season sponsors</span><div class="v">3 to 5</div><div class="d">Partners buy the whole 2027 circuit. Logo travels to every stop, one content engine covers all.</div></div>
+    <div class="card"><span class="k">Per-event</span><div class="v">$5-30k</div><div class="d">Side-event budgets per playbook format, sponsor-funded per stop.</div></div>
+    <div class="card"><span class="k">Grants</span><div class="v">Regional</div><div class="d">Road-to-Devcon-style ecosystem grants per region, RetroPGF (open-source event playbooks), music DAO partners.</div></div>
+    <div class="card"><span class="k">Revenue</span><div class="v">On-chain</div><div class="d">Battle trading-volume share, NFT collectibles per stop, Hypersub circuit membership pass. Artizen is the crowdfund rail.</div></div>
+  </div>
+
+  <p class="foot">Source: 2027-year-of-zao-festivals.md, partners-tracker.md, research-conference-landscape-full.md (45+ scouted targets, narrowed to 16). Dates and windows re-verify before quoting, conference calendars move. Devcon 8 (Nov 2026 Mumbai) and Art Basel Miami (Dec 2026) close the proof leg that makes this circuit sellable. Back to <a href="index.html">Campaign HQ</a>.</p>
+</main>
+</body>
+</html>

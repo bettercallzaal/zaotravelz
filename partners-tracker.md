@@ -19,6 +19,8 @@ Update this file per touch. One row per event partnership.
 
 ## 2027 circuit
 
+Published as a live page: docs/circuit-2027.html (https://bettercallzaal.github.io/zaotravelz/circuit-2027.html), the campaign spine, 16 stops by quarter with dates, application windows, pitch angle, and door in. Keep this table and that page in sync.
+
 | Event | When | Format we pitch | Contact path | Status | Next action | Owner |
 |---|---|---|---|---|---|---|
 | SXSW Austin | Mar 15-21 | Official artist showcase (roster) + side battle night | cart.sxsw.com/products/bandapp | IDEA | **Submit Aug-Sep 2026; CLOSES DEC 18 2026** | Zaal + roster |
