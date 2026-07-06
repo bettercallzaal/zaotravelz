@@ -14,8 +14,10 @@ Every wake runs three phases. No iteration ships drafts only - each one must CHE
 
 ## Phase 2 - BUILD (one artifact per wake, priority order)
 
+**2027 circuit research is PAUSED as of 2026-07-08 (Zaal: "let's wait for now and find ways to align after").** Do not spend a BUILD pass digging further into Edge India's location, Sonar+D applications, Bitcoin 2027 terms, or any other speculative 2027 row. See partners-tracker.md's "2027 alignment checkpoint" section for the revisit trigger (after Devcon 8 wraps, mid-Nov 2026). SXSW is the one exception, its Dec 18 2026 deadline stands on its own timeline regardless of this pause.
+
 1. Anything unblocked by a CHECK trigger (applications > all)
-2. Travel ops research: replace ESTIMATE budget rows in docs/travel.html with real flight/hotel numbers once each stop is decided (Token2049 vs ADE first)
+2. Travel ops research: replace ESTIMATE budget rows in docs/travel.html with real flight/hotel numbers once each near-term stop is decided (Marfa first, since that's confirmed)
 3. Deck build (season deck HTML) once photo archive exists
 4. ZAOstock <-> circuit tie-ins (run-of-show as case study template, post-event metrics report template)
 5. Remaining collateral (insurance research, testimonial request drafts)

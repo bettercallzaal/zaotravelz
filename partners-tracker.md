@@ -22,6 +22,20 @@ Update this file per touch. One row per event partnership.
 | ETHGlobal Tokyo | Sep 25-27 | Reach stretch, not core to plan | ethglobal.com/events | IDEA | Watch only | - |
 | ETHGlobal Cannes / NYC | Apr 3-5 / Jun 12-14 | Already occurred per the 2026 schedule | - | MISSED | Note for 2027 planning, not a 2026 target | - |
 
+## 2027 alignment checkpoint (paused here 2026-07-08, Zaal's call: wait, align after)
+
+Most rows below are ideas, not commitments. Rather than keep digging deeper on speculative 2027 targets, the plan now is to let the 2026 proof leg actually happen and align 2027 picks against what it teaches. Do NOT spend more research effort on Edge India's exact location, Sonar+D applications, or Bitcoin 2027 sponsorship terms until the checkpoint below is revisited.
+
+**What the proof leg should tell us, before locking any 2027 row:**
+- ZAOstock (Oct 3): real production numbers, actual attendance, what the photo/video archive actually captures, whether the crew can handle a second event the same month
+- Marfa or Edge India (late Oct, whichever wins): first read on how ZAO travels as a small crew outside its own turf, no partnership pitch attached, low stakes to learn from
+- Devcon 8 India Music Stage (Nov 3-6): the actual result of working alongside EF organizers, whether Thy Revolution + Iman's trip came together, what relationships formed (India contacts, Coop Records / onchain-music people, anyone Sonar-adjacent), and real photo/video/press material
+- Art Basel Miami (Dec, if pursued): whether a second Basel appearance actually lands a partnership or just repeats 2024
+
+**The one exception that cannot wait:** SXSW showcase applications close Dec 18, 2026, which is BEFORE the full proof leg (Devcon + Basel) finishes digesting. That application needs to go in on its own timeline (Aug-Sep submission target stands) using only what is known now, not the post-proof-leg picture.
+
+**Revisit trigger:** after Devcon 8 wraps (mid-November 2026), come back to this section and either promote 2027 rows to real outreach or drop them, using what actually happened as the filter instead of research alone.
+
 ## 2027 circuit
 
 | Event | When | Format we pitch | Contact path | Status | Next action | Owner |
