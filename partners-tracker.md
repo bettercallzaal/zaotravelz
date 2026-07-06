@@ -8,14 +8,19 @@ Update this file per touch. One row per event partnership.
 
 | Event | When | Format we pitch | Contact path | Status | Next action | Owner |
 |---|---|---|---|---|---|---|
+| **Devcon 8 India Music Stage** | Nov 3-6 | Zaal is ON THE TEAM helping run it with EF organizers. Crowdfunding to bring Thy Revolution (UK) + Iman (Zambia) so all three travel together. | Candy/Candyloo + Carlota (Telegram) | WORKING | Watch for scholarship windows opening, apply same day (time-sensitive) | Zaal |
 | Devcon 8 Ecosystem Program | apply July | ZAO music x onchain community event (5 free tickets) | ecosystem@devcon.org | IDEA | Send interest email THIS WEEK | Zaal |
-| Devcon 8 Community Hub | apply by Aug 12 | "Onchain Music / Independent Artist Economics" hub | forum.devcon.org RFP-13 | IDEA | Draft proposal by Aug 1; recruit 2 co-organizers | Zaal + Claude |
+| Devcon 8 Community Hub | apply by Aug 12 | "Onchain Music / Independent Artist Economics" hub | forum.devcon.org RFP-13 | IDEA | Draft proposal by Aug 1; recruit 2 co-organizers (now runs alongside the confirmed Music Stage role, not instead of it) | Zaal + Claude |
 | ETHGlobal Mumbai | Nov 6-8 | Live battle at hackathon / closing party slot | ethglobal.com; Liam Horne, Josh Stark | IDEA | Register; pitch after hub decision | Zaal |
 | Token2049 Singapore | Oct 7-8 | AFTER 2049 side event w/ partner venue | token2049.com partnerships | IDEA | Decide vs ADE by Jul 15 (ZAOstock Oct 3 conflict check) | Zaal |
 | ADE Amsterdam | Oct 21-25 | Web3 music battle slot w/ DGTL co-programming | amsterdam-dance-event.nl + DGTL | IDEA | Decide vs Token2049 by Jul 15 | Zaal |
 | Art Basel Miami crypto week | Dec 2-7 | ZAO-CHELLA sequel w/ venue partner (Refraction model) | Crypto Nomads, BitBasel | IDEA | Outreach Sept. Verified receipts (doc 919/364): ZAO-CHELLA Dec 6 2024 Wynwood, 10 artists, AR art, 4pm-11pm run of show, organized AttaBotty + DaNici, Gold sponsor Student $LOANZ. Visual proof: @zaofestivals IG (65 posts) - Zaal must screenshot engagement (login-walled) | Zaal |
 | Web Summit Lisbon | Nov 9-12 | Night Summit slot | websummit.com | IDEA | Low priority; only if Devcon momentum spills | - |
 | NFT.NYC | Sep 1-3 | Side-event battle night | nft.nyc/sponsor + side-event circuit | IDEA | Only if NYC crew available. NOTE: ZAO-PALOOZA exact 2024 date + venue UNCONFIRMED - ask Zaal before citing | AttaBotty? |
+| ETHGlobal Lisbon | Jul 24-26 | Stretch: informal side battle if a local partner exists | ethglobal.com/events | IDEA | Only about 3 weeks of runway - low-commitment only | Zaal |
+| ETHGlobal Mumbai | Nov 6-8 | Same trip as Devcon 8 - live battle at hackathon or closing party slot | ethglobal.com; Liam Horne, Josh Stark | IDEA | Register when open | Zaal |
+| ETHGlobal Tokyo | Sep 25-27 | Reach stretch, not core to plan | ethglobal.com/events | IDEA | Watch only | - |
+| ETHGlobal Cannes / NYC | Apr 3-5 / Jun 12-14 | Already occurred per the 2026 schedule | - | MISSED | Note for 2027 planning, not a 2026 target | - |
 
 ## 2027 circuit
 
@@ -33,6 +38,16 @@ Update this file per touch. One row per event partnership.
 | ETHIndia Bangalore | Sep | Battle night; leverage Devcon India relationships | ethindia.co, Devfolio | IDEA | Seed at Devcon 8 in person | Zaal |
 | Token2049 SG / ADE (Q4) | Oct | Year-two return | - | IDEA | Book from 2026 relationship | Zaal |
 | Art Basel Miami | Dec | Third Basel = residency | - | IDEA | Book from Dec 2026 edition | Zaal |
+| Edge City / Edge Esmeralda | TBA (2026 was May 30-Jun 27, Healdsburg CA) | Pop-up village artist-house fit; direct-invite relationship via Telamon | Telamon Ardavanis, direct | IDEA | Ask Telamon about 2027 dates + a music-house slot; clarify if "Zanzalu" is a related/renamed gathering | Zaal |
+| Music Biz | May (TBA) | B2B music industry, tier 2 priority | musicbiz.org | IDEA | Low priority, watch for dates | - |
+
+## Considered, not pursued
+
+| Event | Why parked |
+|---|---|
+| Coachella | Closed lineup, no open crypto-culture side-event path found |
+| Permissionless | 2027 dates not announced; watch blockworks.com |
+| TwitchCon | Real audience overlap but no clear artist-showcase path yet |
 
 ## Ecosystem partners (not events - rails that travel with us)
 
@@ -48,7 +63,10 @@ Update this file per touch. One row per event partnership.
 | Fractured Atlas | Fiscal sponsorship (tax-deductible circuit sponsors) | LIVE | Confirm scope covers non-ZAOstock activity |
 | Artizen | Crowdfund rail: ZAO Festivals LIVE on Season 6 ($25k goal, finale ~Jul 9); ZAO also runs a $10k fund there | LIVE | Submit "ZAO Travelz" (artist travel to 2026-27 circuit) to Season 7; playbooks in ZAOartizen repo |
 | Arun Phillips (DreamStarter) | WaveWarZ India lead, ZABAL Games presenter, top ZAO Fund supporter | LIVE | FIRST CALL for anything India |
-| DDAN (Kshitij Garg + Rishabh, Delhi) | Pop-up community stays; already discussed Devcon India LODGING + music-house partnership (doc 810) | IN CONVO | Revive convo - could solve Mumbai crew lodging |
+| DDAN (Kshitij Garg + Rishabh, Delhi) | Pop-up community stays; already discussed Devcon India LODGING + music-house partnership (doc 810). For Devcon India they have 3 houses (dev house, rooftop founders house w/ podcast studio, newcomer house) 15-20 min from venue. Open to a ZAO music house + community discount coupons | IN CONVO | Revive convo - could solve Mumbai crew lodging |
+| Tom Fellenz | Veteran event producer (20+ events), ZAOstock advisor, runs Fellenz Tourz North America | LIVE | Bring into circuit planning as advisor |
+| Aaron Rafferty (Wide) | Wyoming DEX, cause-coins (trading fees fund nonprofits) + debit card | IN CONVO | Live Wide x WaveWarZ x ZAO benefit-battle thread |
+| Bayo (MPC) | Creator tools + supply-chain auth; JV w/ Tim Parker (Spacium, AR/XR); has a musician brother (ZAOstock/WaveWarZ candidate) | IN CONVO | Atrium content-studio intro is a revenue thread |
 
 ## Collateral gate (blocks all outreach past CONTACTED)
 

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Year of the ZAO Festivals - 2027 Circuit Calendar</title>
+<style>
+  :root {
+    --ink: #151A32; --ink-2: #1E2440; --paper: #F6F2E7;
+    --marigold: #EFA31D; --marigold-deep: #C77F0A; --teal: #2A7E76;
+    --red: #C0392B; --green: #2E8B57;
+
+    --bg: var(--ink); --bg-raise: var(--ink-2); --fg: var(--paper);
+    --fg-mute: #B9BCCB; --rule: rgba(246,242,231,0.16);
+    --accent: var(--marigold); --good: #4BB98A; --bad: #E06050; --warn: var(--marigold);
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: var(--paper); --bg-raise: #FFFFFF; --fg: var(--ink); --fg-mute: #4A5068;
+      --rule: rgba(21,26,50,0.16); --accent: var(--marigold-deep); --good: var(--green); --bad: var(--red); --warn: var(--marigold-deep); }
+  }
+  :root[data-theme="dark"] { --bg: var(--ink); --bg-raise: var(--ink-2); --fg: var(--paper); --fg-mute: #B9BCCB;
+    --rule: rgba(246,242,231,0.16); --accent: var(--marigold); --good: #4BB98A; --bad: #E06050; --warn: var(--marigold); }
+  :root[data-theme="light"] { --bg: var(--paper); --bg-raise: #FFFFFF; --fg: var(--ink); --fg-mute: #4A5068;
+    --rule: rgba(21,26,50,0.16); --accent: var(--marigold-deep); --good: var(--green); --bad: var(--red); --warn: var(--marigold-deep); }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+    font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; line-height: 1.5; }
+  main { max-width: 1180px; margin: 0 auto; padding: 32px 20px 80px; }
+  a { color: var(--accent); }
+  h1 { font-family: 'Avenir Next Condensed', 'Arial Narrow', sans-serif; font-weight: 700;
+    font-size: clamp(26px, 5vw, 40px); text-transform: uppercase; margin: 0 0 4px; letter-spacing: 0.01em; }
+  h1 .gold { color: var(--accent); }
+  .sub { color: var(--fg-mute); margin: 0 0 8px; max-width: 74ch; }
+  .backlink { color: var(--fg-mute); font-size: 12px; text-decoration: none; }
+  .backlink:hover { color: var(--accent); }
+  .rule { margin: 4px 0 22px; padding: 10px 14px; border: 1px solid var(--rule); border-radius: 6px;
+    background: var(--bg-raise); font-size: 12px; color: var(--fg-mute); }
+  .rule strong { color: var(--fg); }
+
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 14px; align-items: center; }
+  .controls input[type="text"] { background: var(--bg-raise); border: 1px solid var(--rule); color: var(--fg);
+    padding: 7px 10px; border-radius: 6px; font-family: inherit; font-size: 12px; min-width: 200px; }
+  .chip { border: 1px solid var(--rule); background: var(--bg-raise); color: var(--fg-mute);
+    padding: 5px 11px; border-radius: 99px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em;
+    cursor: pointer; user-select: none; }
+  .chip[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
+  .legend { font-size: 11px; color: var(--fg-mute); margin-left: auto; }
+
+  .tablewrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg-raise); }
+  table { border-collapse: collapse; width: 100%; font-size: 12.5px; min-width: 980px; }
+  th { text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--fg-mute);
+    padding: 9px 10px; border-bottom: 1px solid var(--rule); white-space: nowrap; cursor: pointer; position: sticky; top: 0;
+    background: var(--bg-raise); }
+  th:hover { color: var(--accent); }
+  th .arrow { opacity: 0.4; font-size: 9px; margin-left: 3px; }
+  th[data-sorted="asc"] .arrow, th[data-sorted="desc"] .arrow { opacity: 1; color: var(--accent); }
+  td { padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr[hidden] { display: none; }
+  td.dates { white-space: nowrap; font-weight: 700; color: var(--accent); }
+  td.deadline { white-space: nowrap; }
+  td.deadline.urgent { color: var(--bad); font-weight: 700; }
+  td.deadline.soon { color: var(--warn); font-weight: 700; }
+  td.city { white-space: nowrap; color: var(--fg-mute); }
+
+  .pill { display: inline-block; padding: 1px 8px; border-radius: 99px; font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
+  .pill.confirmed { background: color-mix(in srgb, var(--good) 20%, transparent); color: var(--good); border: 1px solid var(--good); }
+  .pill.working  { background: color-mix(in srgb, var(--accent) 20%, transparent); color: var(--accent); border: 1px solid var(--accent); }
+  .pill.idea  { background: color-mix(in srgb, var(--fg-mute) 15%, transparent); color: var(--fg-mute); border: 1px solid var(--rule); }
+  .pill.stretch { background: color-mix(in srgb, var(--warn) 14%, transparent); color: var(--warn); border: 1px dashed var(--warn); }
+  .pill.missed { background: transparent; color: var(--bad); border: 1px dashed var(--bad); text-decoration: line-through; }
+  .cat { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--fg-mute); }
+
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent);
+    border-top: 2px solid var(--accent); display: inline-block; padding-top: 8px; margin: 40px 0 12px; }
+  .note-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; }
+  .card { background: var(--bg-raise); border: 1px solid var(--rule); border-radius: 6px; padding: 12px 14px; }
+  .card .k { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--fg-mute); }
+  .card .d { font-size: 12px; margin-top: 4px; }
+  .foot { margin-top: 40px; color: var(--fg-mute); font-size: 11px; }
+</style>
+</head>
+<body>
+<main>
+  <a class="backlink" href="index.html">&larr; campaign HQ</a>
+  <h1>The 2027 <span class="gold">Circuit</span> Calendar</h1>
+  <p class="sub">Every event Zaal can realistically attend and pitch ZAO Festivals at, late 2026 through 2027. Sortable, filterable. Application deadlines often close months before the event - sort by Deadline to see what needs action first.</p>
+  <div class="rule">Standing rule: <strong>The ZAO organizes ONLY ZAOstock.</strong> Every row below is a PARTNERSHIP target - we bring the entertainment (a live WaveWarZ battle, a showcase, a stage) to someone else's event. We never say we run it.</div>
+
+  <div class="controls">
+    <input type="text" id="q" placeholder="Search event, city, contact...">
+    <button class="chip" data-cat="all" aria-pressed="true">All</button>
+    <button class="chip" data-cat="web3">Web3</button>
+    <button class="chip" data-cat="music">Music</button>
+    <button class="chip" data-cat="culture">Culture / Pop-up</button>
+    <button class="chip" data-cat="tech">Tech / Streaming</button>
+    <span class="legend">Click any column header to sort</span>
+  </div>
+
+  <div class="tablewrap">
+  <table id="cal">
+    <thead>
+      <tr>
+        <th data-key="dates">Dates<span class="arrow">&#9660;</span></th>
+        <th data-key="event">Event</th>
+        <th data-key="city">City</th>
+        <th data-key="cat">Category</th>
+        <th data-key="deadline">Deadline<span class="arrow">&#9660;</span></th>
+        <th data-key="angle">ZAO pitch angle</th>
+        <th data-key="contact">Contact path</th>
+        <th data-key="status">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr data-cat="web3">
+        <td class="dates" data-sort="2026-07-24">Jul 24-26, 2026</td>
+        <td>ETHGlobal Lisbon</td><td class="city">Lisbon, Portugal</td><td class="cat">web3</td>
+        <td class="deadline urgent" data-sort="2026-07-15">~3 wk runway - fast only</td>
+        <td>Stretch: informal side battle/showcase if a local partner exists. No time for a full application cycle.</td>
+        <td>ethglobal.com/events</td>
+        <td><span class="pill stretch">Stretch</span></td>
+      </tr>
+
+      <tr data-cat="culture">
+        <td class="dates" data-sort="2026-08-01">Aug (window)</td>
+        <td>Ecosystem Program R2 opens</td><td class="city">n/a (grant)</td><td class="cat">web3</td>
+        <td class="deadline" data-sort="2026-08-01">Opens July - apply same day</td>
+        <td>Music x onchain community event -&gt; grant + up to 5 free/discounted Devcon tickets</td>
+        <td>ecosystem@devcon.org</td>
+        <td><span class="pill working">Drafted, watching</span></td>
+      </tr>
+
+      <tr data-cat="web3">
+        <td class="dates" data-sort="2026-08-12">due Aug 12</td>
+        <td>Devcon 8 Community Hub (RFP-13)</td><td class="city">n/a (proposal)</td><td class="cat">web3</td>
+        <td class="deadline urgent" data-sort="2026-08-12">Aug 12, 2026</td>
+        <td>First-ever music Community Hub at any Devcon. Draft ready; needs co-organizers locked.</td>
+        <td>forum.devcon.org RFP-13</td>
+        <td><span class="pill working">Drafted</span></td>
+      </tr>
+
+      <tr data-cat="music">
+        <td class="dates" data-sort="2026-09-01">Sep 1-3, 2026</td>
+        <td>NFT.NYC</td><td class="city">Manhattan, NYC</td><td class="cat">web3</td>
+        <td class="deadline" data-sort="2026-08-01">Rolling - only if NYC crew available</td>
+        <td>Side-event battle night. 100+ independent side events already coordinate via Crypto Nomads.</td>
+        <td>nft.nyc/sponsor + Crypto Nomads</td>
+        <td><span class="pill idea">Idea</span></td>
+      </tr>
+
+      <tr data-cat="web3">
+        <td class="dates" data-sort="2026-09-15">mid-Sep 2026</td>
+        <td>ETHIndia (Bangalore)</td><td class="city">Bangalore, India</td><td class="cat">web3</td>
+        <td class="deadline" data-sort="2026-09-01">Watch ethindia.co</td>
+        <td>Battle night; seed relationships in person at Devcon 8 first, follow up here.</td>
+        <td>ethindia.co, Devfolio</td>
+        <td><span class="pill idea">Idea</span></td>
+      </tr>
+
+      <tr data-cat="tech">
+        <td class="dates" data-sort="2026-09-17">Sep 17-18, 2026</td>
+        <td>Podcast Movement (NYC)</td><td class="city">New York City</td><td class="cat">tech</td>
+        <td class="deadline" data-sort="2026-08-15">Speaker/sponsor apps rolling</td>
+        <td>BCZ YapZ angle: audio-entertainment crossover, low priority unless NYC trip already happening.</td>
+        <td>podcastmovement.com</td>
+        <td><span class="pill idea">Idea</span></td>
+      </tr>
+
+      <tr data-cat="web3">
+        <td class="dates" data-sort="2026-09-25">Sep 25-27, 2026</td>
+        <td>ETHGlobal Tokyo</td><td class="city">Tokyo, Japan</td><td class="cat">web3</td>
+        <td class="deadline" data-sort="2026-08-15">Watch ethglobal.com/events</td>
+        <td>Reach stretch - only if a Japan/APAC leg opens up around the circuit; not core to plan.</td>
+        <td>ethglobal.com/events</td>
+        <td><span class="pill idea">Idea</span></td>
+      </tr>
+
+      <tr data-cat="culture">
+        <td class="dates" data-sort="2026-10-03">Oct 3, 2026</td>
+        <td><strong>ZAOSTOCK</strong> (the one we organize)</td><td class="city">Ellsworth, Maine</td><td class="cat">culture</td>
+        <td class="deadline" data-sort="2026-08-01">Photo/video crew booked NOW</td>
+        <td>The flagship. Steve Peer (430 house concerts since 1989) co-curates. Case-study shoot feeds every pitch after.</td>
+        <td>internal - AttaBotty + DaNici production</td>
+        <td><span class="pill confirmed">Confirmed - ours</span></td>
+      </tr>
+
+      <tr data-cat="web3">
+        <td class="dates" data-sort="2026-10-07">Oct 7-8, 2026</td>
+        <td>Token2049 Singapore</td><td class="city">Singapore</td><td class="cat">web3</td>
+        <td class="deadline" data-sort="2026-07-15">Decide vs ADE by Jul 15</td>
+        <td>AFTER 2049 side-event ecosystem (1,000+ unofficial events). 25K+ attendees.</td>
+        <td>token2049.com partnerships</td>
+        <td><span class="pill idea">Idea - pick one w/ ADE</span></td>
+      </tr>
+
+      <tr data-cat="music">
+        <td class="dates" data-sort="2026-10-13">Oct 13-16, 2026</td>
+        <td>Mondo.NYC</td><td class="city">Brooklyn, NYC</td><td class="cat">music</td>
+        <td class="deadline missed" data-sort="2026-06-30">Missed - apps closed Jun 30, 2026</td>
+        <td>Artist showcase, free to apply. Re-target for 2027 edition.</td>
+        <td>mondo.nyc/artist-application</td>
+        <td><span class="pill missed">Missed 2026</span></td>
+      </tr>
+
+      <tr data-cat="music">
+        <td class="dates" data-sort="2026-10-21">Oct 21-25, 2026</td>
+        <td>ADE Amsterdam</td><td class="city">Amsterdam, NL</td><td class="cat">music</td>
+        <td class="deadline" data-sort="2026-07-15">Decide vs Token2049 by Jul 15</td>
+        <td>World's largest club festival, 400K+ attendees, 300+ venues. DGTL co-programming path.</td>
+        <td>amsterdam-dance-event.nl + DGTL</td>
+        <td><span class="pill idea">Idea - pick one w/ T2049</span></td>
+      </tr>
+
+      <tr data-cat="web3">
+        <td class="dates" data-sort="2026-11-03"><strong>Nov 3-6, 2026</strong></td>
+        <td><strong>Devcon 8 + India Music Stage</strong></td><td class="city">Mumbai, India</td><td class="cat">web3</td>
+        <td class="deadline" data-sort="2026-08-12">Scholarships time-sensitive - apply the day they open</td>
+        <td>Zaal is ON the team helping run the DevCon India MUSIC STAGE with EF organizers. Crowdfunding to bring Thy Revolution (UK) + Iman (Zambia).</td>
+        <td>Candy/Candyloo + Carlota (Telegram); Shriyash for local slot door</td>
+        <td><span class="pill confirmed">Working - already on the team</span></td>
+      </tr>
+
+      <tr data-cat="web3">
+        <td class="dates" data-sort="2026-11-06">Nov 6-8, 2026</td>
+        <td>ETHGlobal Mumbai</td><td class="city">Mumbai, India</td><td class="cat">web3</td>
+        <td class="deadline" data-sort="2026-09-01">Register when open</td>
+        <td>Same trip as Devcon - live battle at hackathon or closing party slot.</td>
+        <td>ethglobal.com; Liam Horne, Josh Stark</td>
+        <td><span class="pill idea">Idea</span></td>
+      </tr>
+
+      <tr data-cat="tech">
+        <td class="dates" data-sort="2026-11-09">Nov 9-12, 2026</td>
+        <td>Web Summit Lisbon</td><td class="city">Lisbon, Portugal</td><td class="cat">tech</td>
+        <td class="deadline" data-sort="2026-09-15">Low priority</td>
+        <td>Night Summit after-hours slot, only if Devcon momentum spills this direction.</td>
+        <td>websummit.com</td>
+        <td><span class="pill idea">Low priority</span></td>
+      </tr>
+
+      <tr data-cat="culture">
+        <td class="dates" data-sort="2026-12-02">Dec 2-7, 2026</td>
+        <td>Art Basel Miami (crypto week)</td><td class="city">Miami, FL</td><td class="cat">culture</td>
+        <td class="deadline" data-sort="2026-09-01">Outreach Sept</td>
+        <td>ZAO-CHELLA sequel. We were HERE in 2024 (10 artists, AR art, live WaveWarZ battle). Return with receipts.</td>
+        <td>Crypto Nomads, BitBasel</td>
+        <td><span class="pill idea">Idea - strong fit</span></td>
+      </tr>
+
+      <tr data-cat="culture">
+        <td class="dates" data-sort="2027-01-01">2027 (TBA)</td>
+        <td>Edge City / Edge Esmeralda follow-on</td><td class="city">TBA (2026 was Healdsburg, CA)</td><td class="cat">culture</td>
+        <td class="deadline" data-sort="2026-12-01">Direct-invite relationship - ask Telamon</td>
+        <td>Telamon Ardavanis (Edge City founder) is a direct-invite relationship. Pop-up village houses = natural artist-house fit. 2026 edition was May 30-Jun 27 in Healdsburg; 2027 dates not yet announced.</td>
+        <td>Telamon Ardavanis, direct</td>
+        <td><span class="pill idea">Relationship exists - ask</span></td>
+      </tr>
+
+      <tr data-cat="web3">
+        <td class="dates" data-sort="2027-02-01">Feb 2027 (TBA)</td>
+        <td>ETHDenver</td><td class="city">Denver, CO</td><td class="cat">web3</td>
+        <td class="deadline" data-sort="2026-10-01">Watch app opening ~Oct 2026</td>
+        <td>Creator application; BUIDL City battle stage. Live music + art installations already confirmed format.</td>
+        <td>ethdenver.com/creator</td>
+        <td><span class="pill idea">Idea</span></td>
+      </tr>
+
+      <tr data-cat="music">
+        <td class="dates" data-sort="2027-03-15"><strong>Mar 15-21, 2027</strong></td>
+        <td><strong>SXSW Austin</strong></td><td class="city">Austin, TX</td><td class="cat">music</td>
+        <td class="deadline urgent" data-sort="2026-12-18">CLOSES Dec 18, 2026 - submit Aug-Sep</td>
+        <td>Official artist showcase (roster) + side battle night. The original showcase conference, 50K+ music-track attendees.</td>
+        <td>cart.sxsw.com/products/bandapp</td>
+        <td><span class="pill working">Queued - hard deadline</span></td>
+      </tr>
+
+      <tr data-cat="web3">
+        <td class="dates" data-sort="2027-04-05">Apr 5-8, 2027</td>
+        <td>EthCC[10] Cannes</td><td class="city">Cannes, France</td><td class="cat">web3</td>
+        <td class="deadline" data-sort="2027-01-15">Portal opens early 2027</td>
+        <td>EthCC Week: 250+ community-run side events, highest density of any Ethereum conference circuit stop.</td>
+        <td>ethcc.io/week</td>
+        <td><span class="pill idea">Idea</span></td>
+      </tr>
+
+      <tr data-cat="tech">
+        <td class="dates" data-sort="2027-04-04">Apr 4-7, 2027</td>
+        <td>NAB Show</td><td class="city">Las Vegas, NV</td><td class="cat">tech</td>
+        <td class="deadline" data-sort="2027-01-01">Exhibit/sponsor apps rolling</td>
+        <td>Broadcast/streaming infrastructure show. Simulcast-stack story (5-platform, 150+ consecutive weeks) fits.</td>
+        <td>nabshow.com</td>
+        <td><span class="pill idea">Idea</span></td>
+      </tr>
+
+      <tr data-cat="web3">
+        <td class="dates" data-sort="2027-04-21">Apr 21-22, 2027</td>
+        <td>Token2049 Dubai</td><td class="city">Dubai, UAE</td><td class="cat">web3</td>
+        <td class="deadline" data-sort="2027-02-01">After Singapore relationship lands</td>
+        <td>AFTER-party partner, follows from the Singapore 2026 relationship if that lands.</td>
+        <td>token2049.com</td>
+        <td><span class="pill idea">Idea</span></td>
+      </tr>
+
+      <tr data-cat="web3">
+        <td class="dates" data-sort="2027-05-04">May 4-6, 2027</td>
+        <td>Consensus Miami</td><td class="city">Miami Beach, FL</td><td class="cat">web3</td>
+        <td class="deadline" data-sort="2027-02-01">Pitch Q1 2027 with 2026 reel</td>
+        <td>No entertainment track exists yet at Consensus - pioneer opening. Miami setting fits.</td>
+        <td>consensus.coindesk.com</td>
+        <td><span class="pill idea">Idea - pioneer</span></td>
+      </tr>
+
+      <tr data-cat="music">
+        <td class="dates" data-sort="2027-05-01">May 2027 (TBA)</td>
+        <td>Music Biz</td><td class="city">San Diego, CA</td><td class="cat">music</td>
+        <td class="deadline" data-sort="2027-02-01">Dates TBA</td>
+        <td>B2B music industry conference, tier 2 priority.</td>
+        <td>musicbiz.org</td>
+        <td><span class="pill idea">Idea - tier 2</span></td>
+      </tr>
+
+      <tr data-cat="web3">
+        <td class="dates" data-sort="2027-05-30">May 30-Jun 27, 2026 (annual)</td>
+        <td>Edge Esmeralda (2026 dates, for reference)</td><td class="city">Healdsburg, CA</td><td class="cat">culture</td>
+        <td class="deadline" data-sort="2026-12-01">2027 dates not announced</td>
+        <td>Same as row above - listed twice intentionally so it sorts near both its actual 2026 slot and the 2027 planning window.</td>
+        <td>Telamon Ardavanis, direct</td>
+        <td><span class="pill idea">Watch for 2027 dates</span></td>
+      </tr>
+
+      <tr data-cat="web3">
+        <td class="dates" data-sort="2027-06-01">Spring/early 2027 (TBA)</td>
+        <td>FarCon</td><td class="city">TBA (2024 was Venice Beach, CA)</td><td class="cat">web3</td>
+        <td class="deadline" data-sort="2027-01-01">farcon.xyz for announcements</td>
+        <td>Farcaster-native battle + Sonata/Coop Records collab. No 2027 dates confirmed yet.</td>
+        <td>farcon.xyz, @coopahtroopa</td>
+        <td><span class="pill idea">TBA</span></td>
+      </tr>
+
+      <tr data-cat="music">
+        <td class="dates" data-sort="2027-07-01">Jul 2027 (TBA, was Jul 1-3, 2026)</td>
+        <td>Wallifornia MusicTech</td><td class="city">Liege, Belgium</td><td class="cat">music</td>
+        <td class="deadline" data-sort="2027-03-01">Apply Q1 2027</td>
+        <td>Summit slot + launch party set. Strongest pure music+tech thematic fit on the list.</td>
+        <td>walliforniamusictech.com</td>
+        <td><span class="pill idea">Idea</span></td>
+      </tr>
+
+      <tr data-cat="tech">
+        <td class="dates" data-sort="2027-07-08">Jul 8-10, 2027</td>
+        <td>VidCon Anaheim</td><td class="city">Anaheim, CA</td><td class="cat">tech</td>
+        <td class="deadline" data-sort="2027-03-01">Apply when 2027 apps open</td>
+        <td>Featured creator + live battle show. Creator-culture crossover, 50K+ attendees.</td>
+        <td>vidcon.com/anaheim</td>
+        <td><span class="pill idea">Idea</span></td>
+      </tr>
+
+      <tr data-cat="culture">
+        <td class="dates" data-sort="2027-09-01">Sep 2027 (TBA)</td>
+        <td>NFT.NYC (return)</td><td class="city">Manhattan, NYC</td><td class="cat">web3</td>
+        <td class="deadline" data-sort="2026-12-01">After 2026 edition decision</td>
+        <td>Return with 2026 receipts if the Sep 2026 edition happens.</td>
+        <td>nft.nyc</td>
+        <td><span class="pill idea">Idea</span></td>
+      </tr>
+
+      <tr data-cat="web3">
+        <td class="dates" data-sort="2027-10-01">Oct 2027 (TBA)</td>
+        <td>Token2049 SG / ADE (year two)</td><td class="city">Singapore / Amsterdam</td><td class="cat">web3</td>
+        <td class="deadline" data-sort="2027-06-01">Book from 2026 relationship</td>
+        <td>Whichever we ran in 2026, return for year two. Recurring-series framing beats one-off asks.</td>
+        <td>relationship carries forward</td>
+        <td><span class="pill idea">Idea</span></td>
+      </tr>
+
+      <tr data-cat="culture">
+        <td class="dates" data-sort="2027-12-01">Dec 2027 (TBA)</td>
+        <td>Art Basel Miami (third year)</td><td class="city">Miami, FL</td><td class="cat">culture</td>
+        <td class="deadline" data-sort="2027-09-01">Book from Dec 2026 edition</td>
+        <td>Third Basel appearance = residency narrative (Refraction membership-pass model).</td>
+        <td>relationship carries forward</td>
+        <td><span class="pill idea">Idea</span></td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Considered, not pursued</h2>
+  <div class="note-grid">
+    <div class="card"><span class="k">Coachella</span><div class="d">Closed lineup, no open crypto-culture side-event application path found. Not worth chasing directly - Wallifornia and SXSW cover the music-x-tech crossover instead.</div></div>
+    <div class="card"><span class="k">Permissionless</span><div class="d">2027 dates not announced (last known: Jun 2025, Brooklyn). Watch blockworks.com, add when a date lands.</div></div>
+    <div class="card"><span class="k">TwitchCon</span><div class="d">20K+ gaming/streaming audience, real music-adjacent culture, but no clear artist-showcase path yet. Parked, revisit if a creator partnership opens.</div></div>
+    <div class="card"><span class="k">Zanzalu</span><div class="d">No current public info found under this name. If it is a renamed or successor Edge City gathering, fold it into the Edge City row once confirmed with Telamon.</div></div>
+  </div>
+
+  <p class="foot">Deadline colors: red = closes/starts inside 30 days, gold = closes/starts inside 90 days. Dates marked TBA are estimates from the prior year's cycle, not confirmed. Source: partners-tracker.md, ZAOOS research docs 945-947, CONTEXT.md.</p>
+</main>
+
+<script>
+(function(){
+  var q = document.getElementById('q');
+  var chips = document.querySelectorAll('.chip');
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#cal tbody tr'));
+  var activeCat = 'all';
+
+  function applyFilter(){
+    var term = (q.value || '').toLowerCase();
+    rows.forEach(function(r){
+      var matchesCat = activeCat === 'all' || r.getAttribute('data-cat') === activeCat;
+      var matchesText = !term || r.textContent.toLowerCase().indexOf(term) !== -1;
+      r.hidden = !(matchesCat && matchesText);
+    });
+  }
+  q.addEventListener('input', applyFilter);
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      chips.forEach(function(x){ x.setAttribute('aria-pressed','false'); });
+      c.setAttribute('aria-pressed','true');
+      activeCat = c.getAttribute('data-cat');
+      applyFilter();
+    });
+  });
+
+  var table = document.getElementById('cal');
+  var tbody = table.querySelector('tbody');
+  var ths = table.querySelectorAll('th');
+  ths.forEach(function(th, idx){
+    th.addEventListener('click', function(){
+      var key = th.getAttribute('data-key');
+      var current = th.getAttribute('data-sorted');
+      var dir = current === 'asc' ? 'desc' : 'asc';
+      ths.forEach(function(x){ x.removeAttribute('data-sorted'); });
+      th.setAttribute('data-sorted', dir);
+
+      var trs = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+      trs.sort(function(a, b){
+        var av, bv;
+        if (key === 'dates' || key === 'deadline') {
+          var ac = a.children[idx], bc = b.children[idx];
+          av = (ac.getAttribute('data-sort') || ac.textContent).trim();
+          bv = (bc.getAttribute('data-sort') || bc.textContent).trim();
+        } else {
+          av = a.children[idx].textContent.trim().toLowerCase();
+          bv = b.children[idx].textContent.trim().toLowerCase();
+        }
+        if (av < bv) return dir === 'asc' ? -1 : 1;
+        if (av > bv) return dir === 'asc' ? 1 : -1;
+        return 0;
+      });
+      trs.forEach(function(tr){ tbody.appendChild(tr); });
+    });
+  });
+})();
+</script>
+</body>
+</html>
