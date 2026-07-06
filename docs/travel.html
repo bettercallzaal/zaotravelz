@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Year of the ZAO Festivals - Travel Ops</title>
+<style>
+  :root {
+    --ink: #151A32; --ink-2: #1E2440; --paper: #F6F2E7;
+    --marigold: #EFA31D; --marigold-deep: #C77F0A; --teal: #2A7E76;
+    --red: #C0392B; --green: #2E8B57;
+
+    --bg: var(--ink); --bg-raise: var(--ink-2); --fg: var(--paper);
+    --fg-mute: #B9BCCB; --rule: rgba(246,242,231,0.16);
+    --accent: var(--marigold); --good: #4BB98A; --bad: #E06050; --warn: var(--marigold);
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: var(--paper); --bg-raise: #FFFFFF; --fg: var(--ink); --fg-mute: #4A5068;
+      --rule: rgba(21,26,50,0.16); --accent: var(--marigold-deep); --good: var(--green); --bad: var(--red); --warn: var(--marigold-deep); }
+  }
+  :root[data-theme="dark"] { --bg: var(--ink); --bg-raise: var(--ink-2); --fg: var(--paper); --fg-mute: #B9BCCB;
+    --rule: rgba(246,242,231,0.16); --accent: var(--marigold); --good: #4BB98A; --bad: #E06050; --warn: var(--marigold); }
+  :root[data-theme="light"] { --bg: var(--paper); --bg-raise: #FFFFFF; --fg: var(--ink); --fg-mute: #4A5068;
+    --rule: rgba(21,26,50,0.16); --accent: var(--marigold-deep); --good: var(--green); --bad: var(--red); --warn: var(--marigold-deep); }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+    font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; line-height: 1.55; }
+  main { max-width: 1080px; margin: 0 auto; padding: 32px 20px 80px; }
+  a { color: var(--accent); }
+  h1 { font-family: 'Avenir Next Condensed', 'Arial Narrow', sans-serif; font-weight: 700;
+    font-size: clamp(26px, 5vw, 40px); text-transform: uppercase; margin: 0 0 4px; letter-spacing: 0.01em; }
+  h1 .gold { color: var(--accent); }
+  .sub { color: var(--fg-mute); margin: 0 0 8px; max-width: 76ch; }
+  .backlink { color: var(--fg-mute); font-size: 12px; text-decoration: none; }
+  .backlink:hover { color: var(--accent); }
+  .links { display: flex; gap: 16px; margin: 4px 0 18px; }
+
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent);
+    border-top: 2px solid var(--accent); display: inline-block; padding-top: 8px; margin: 36px 0 12px; }
+  p.note { color: var(--fg-mute); max-width: 76ch; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+  .card { background: var(--bg-raise); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; }
+  .card .k { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--fg-mute); }
+  .card .v { font-size: 24px; font-weight: 700; margin-top: 2px; }
+  .card .d { font-size: 12px; color: var(--fg-mute); margin-top: 4px; }
+
+  .tablewrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg-raise); }
+  table { border-collapse: collapse; width: 100%; font-size: 12.5px; }
+  th { text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--fg-mute);
+    padding: 9px 10px; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+  td { padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td.dates { white-space: nowrap; color: var(--accent); font-weight: 700; }
+  tr.total td { font-weight: 700; border-top: 2px solid var(--accent); }
+
+  .pill { display: inline-block; padding: 1px 8px; border-radius: 99px; font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
+  .pill.free { background: color-mix(in srgb, var(--good) 20%, transparent); color: var(--good); border: 1px solid var(--good); }
+  .pill.evisa { background: color-mix(in srgb, var(--warn) 18%, transparent); color: var(--warn); border: 1px solid var(--warn); }
+  .pill.none { background: color-mix(in srgb, var(--fg-mute) 15%, transparent); color: var(--fg-mute); border: 1px solid var(--rule); }
+  .pill.done { background: color-mix(in srgb, var(--good) 22%, transparent); color: var(--good); border: 1px solid var(--good); }
+  .pill.watch { background: color-mix(in srgb, var(--warn) 18%, transparent); color: var(--warn); border: 1px solid var(--warn); }
+
+  .conflict { border-left: 3px solid var(--bad); padding-left: 10px; margin: 10px 0; }
+  ul.actions { list-style: none; padding: 0; margin: 0; }
+  ul.actions li { padding: 9px 12px; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg-raise);
+    margin-bottom: 8px; display: flex; gap: 10px; align-items: baseline; }
+  ul.actions .n { color: var(--accent); font-weight: 700; }
+  .foot { margin-top: 40px; color: var(--fg-mute); font-size: 11px; }
+</style>
+</head>
+<body>
+<main>
+  <a class="backlink" href="index.html">&larr; campaign HQ</a>
+  <div class="links">
+    <a href="events.html">2027 circuit calendar</a>
+    <a href="devcon8.html">Devcon 8 pitch</a>
+  </div>
+  <h1>Travel <span class="gold">Ops</span></h1>
+  <p class="sub">The whole-circuit travel layer: total days away from home across every stop, entry requirements per country, a multi-stop budget roll-up, the touring gear kit, and who is actually confirmed to be where. Devcon-specific detail stays in trip-facts.md and devcon-guide.md; this page is the roll-up across ALL stops.</p>
+
+  <h2>Travel-day load, 2026-2027</h2>
+  <p class="note">Every trip currently on the calendar, stacked. The point of this table is to catch conflicts and total days away from the day job before they become a problem, not after.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Dates</th><th>Event</th><th>City</th><th class="num">Days away (est, incl travel)</th><th>Confirmed?</th></tr></thead>
+    <tbody>
+      <tr><td class="dates">Oct 3</td><td>ZAOSTOCK</td><td>Ellsworth, ME</td><td class="num">1-2</td><td><span class="pill done">Ours, confirmed</span></td></tr>
+      <tr><td class="dates">Oct 7-8</td><td>Token2049 Singapore <em>or</em> ADE Amsterdam</td><td>Singapore / Amsterdam</td><td class="num">5-7</td><td><span class="pill watch">Pick one by Jul 15</span></td></tr>
+      <tr><td class="dates">Nov 2-9</td><td>Devcon 8 India Music Stage + ETHGlobal Mumbai</td><td>Mumbai, India</td><td class="num">7-8</td><td><span class="pill done">Working, on the team</span></td></tr>
+      <tr><td class="dates">Dec 2-7</td><td>Art Basel Miami return</td><td>Miami, FL</td><td class="num">3-5</td><td><span class="pill watch">Idea, outreach Sept</span></td></tr>
+      <tr><td class="dates">Mar 15-21, 2027</td><td>SXSW Austin</td><td>Austin, TX</td><td class="num">4-6</td><td><span class="pill watch">Hard deadline Dec 18 to lock this in</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="conflict">
+    <strong>Flag:</strong> the Oct 7-8 Singapore/Amsterdam trip and the Nov 2-9 Mumbai trip sit about 3-4 weeks apart. That is two international trips in one month if both happen, on top of running ZAOstock Oct 3 the week before. Realistic sequencing: ZAOstock (Oct 3) needs a full week of wind-down before flying anywhere. If the Oct international leg happens, keep it lean (no extra artists, minimum crew) so Mumbai gets full energy and budget.
+  </div>
+
+  <h2>Entry requirements, by country (verified 2026-07-06)</h2>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Destination</th><th>US citizen requirement</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>India (Mumbai)</td><td><span class="pill done">Visa in hand</span></td><td>Already obtained per trip-facts.md. New since Apr 2026: digital E-Arrival Card required 24-72h before departure, separate from the visa.</td></tr>
+      <tr><td>Singapore</td><td><span class="pill free">Visa-free, 90 days</span></td><td>Free online Singapore Arrival Card required at least 3 days pre-trip (ica.gov.sg). Passport valid 6+ months beyond stay.</td></tr>
+      <tr><td>Netherlands (Amsterdam)</td><td><span class="pill free">Visa-free (for now)</span></td><td>ETIAS launches Q4 2026, exact date not yet announced. As of Jul 2026, US citizens still travel on passport alone. If the Oct trip lands after ETIAS goes live, budget 20 EUR (~$22) and apply online before flying.</td></tr>
+      <tr><td>UAE (Dubai, 2027)</td><td><span class="pill free">Visa on arrival, 90 days</span></td><td>No pre-application needed. Passport valid 6+ months, round-trip ticket required at the counter.</td></tr>
+      <tr><td>France (Cannes, 2027)</td><td><span class="pill free">Visa-free (for now)</span></td><td>Same ETIAS timeline as Netherlands, watch for the Q4 2026 launch date before this trip.</td></tr>
+      <tr><td>USA (Miami, Austin, Denver, Anaheim, Vegas, San Diego, Healdsburg)</td><td><span class="pill none">Domestic</span></td><td>No visa questions for Zaal. Only matters for any non-US crew joining a US stop.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">This matrix is for Zaal (US citizen) traveling to each stop. It does NOT cover Thy Revolution (UK) or Iman (Zambia) traveling to Mumbai, or any non-US artist joining a US stop, those are separate lookups, per traveler, per destination.</p>
+
+  <h2>Travel infrastructure worth setting up now</h2>
+  <div class="grid">
+    <div class="card"><span class="k">Global Entry / TSA PreCheck</span><div class="v"><span class="pill watch">Check status</span></div><div class="d">Five to six international re-entries this year (Singapore or Amsterdam, Mumbai, possibly Dubai/Cannes in 2027). If not already enrolled, this pays for itself by trip two. Processing can take months, apply now if not already in the pipeline.</div></div>
+    <div class="card"><span class="k">Airline / alliance</span><div class="v"><span class="pill watch">Pick one</span></div><div class="d">This many long-haul legs in one year is worth concentrating on one alliance (Star Alliance covers Singapore Airlines routes to SIN, SkyTeam/Oneworld cover others) to stack status and free-checked-bag value for touring gear.</div></div>
+    <div class="card"><span class="k">Travel credit card</span><div class="v"><span class="pill watch">Check coverage</span></div><div class="d">If the card in use has an annual travel credit or lounge access, this is the year it gets used. Also confirm it has no foreign transaction fees, this many countries in one year makes that fee add up fast.</div></div>
+  </div>
+
+  <h2>Multi-stop budget roll-up (2026 proof leg)</h2>
+  <p class="note">Devcon numbers are sourced and current (see trip-facts.md, budget.md). Every other stop below is a first-pass planning estimate, not yet researched with live flight/hotel data, marked ESTIMATE until the loop does a real pass per stop.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Stop</th><th class="num">Low</th><th class="num">Mid</th><th class="num">High</th><th>Confidence</th></tr></thead>
+    <tbody>
+      <tr><td>ZAOstock (home turf, no travel cost)</td><td class="num">-</td><td class="num">-</td><td class="num">-</td><td>Production budget lives in run-of-show doc, not here</td></tr>
+      <tr><td>Devcon 8 Mumbai + ETHGlobal (visa paid)</td><td class="num">$969</td><td class="num">$1,439</td><td class="num">$2,294</td><td>Sourced, see budget.md</td></tr>
+      <tr><td>Token2049 Singapore (if picked)</td><td class="num">$1,200</td><td class="num">$1,900</td><td class="num">$2,800</td><td>ESTIMATE, flight + hotel + ticket, not yet researched</td></tr>
+      <tr><td>ADE Amsterdam (if picked instead)</td><td class="num">$1,000</td><td class="num">$1,600</td><td class="num">$2,400</td><td>ESTIMATE, not yet researched</td></tr>
+      <tr><td>Art Basel Miami (domestic)</td><td class="num">$500</td><td class="num">$900</td><td class="num">$1,500</td><td>ESTIMATE, domestic flight + hotel during Basel surge pricing</td></tr>
+      <tr class="total"><td>2026 proof leg total (assumes ONE of Singapore/Amsterdam)</td><td class="num">$2,469</td><td class="num">$3,939</td><td class="num">$6,094</td><td>Sponsor/crowdfund/Ecosystem Program grant offsets Devcon leg specifically</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Touring gear kit (what travels with the crew)</h2>
+  <p class="note">Condensed from collateral/tech-rider.md for the specific question of what physically goes in a bag versus what gets sourced locally at each venue.</p>
+  <div class="grid">
+    <div class="card"><span class="k">Pack and fly</span><div class="d">Laptop x2 (encoder + mechanics/voting), capture card, 2x wireless handheld mics, 2x backup wired SM58, 5G hotspot (backup internet), QR signage printed fresh per stop, camera if house cams unavailable.</div></div>
+    <div class="card"><span class="k">Source locally, every stop</span><div class="d">PA system, stage monitors, power drops, projector/LED screen, table + chairs for streaming station. Confirm via tech-rider.md at T-14 advance call.</div></div>
+    <div class="card"><span class="k">Per-country adapters</span><div class="d">India, Singapore, UAE: Type C/G plug adapters needed. EU stops (Amsterdam, Cannes): Type C/E. Pack a universal multi-adapter, not per-country singles, given the number of stops this year.</div></div>
+  </div>
+
+  <h2>Crew roster, who is confirmed for what</h2>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Stop</th><th>Confirmed</th><th>In talks / TBD</th></tr></thead>
+    <tbody>
+      <tr><td>Devcon 8 India Music Stage</td><td>Zaal (on the organizing team), crowdfunding to add Thy Revolution (UK) + Iman (Zambia)</td><td>Hub co-organizers: AttaBotty, Ike, India co-organizer via Shriyash/Arun, all unconfirmed</td></tr>
+      <tr><td>ZAOstock</td><td>Zaal, AttaBotty, DaNici (production), Steve Peer (co-curator)</td><td>Full artist lineup TBD</td></tr>
+      <tr><td>Token2049 SG / ADE</td><td>-</td><td>Zaal solo most likely given cost; artist travel would need its own funding line</td></tr>
+      <tr><td>Art Basel Miami</td><td>-</td><td>AttaBotty + DaNici organized CHELLA in 2024, natural first call for a return crew</td></tr>
+      <tr><td>SXSW</td><td>-</td><td>Roster application, TBD which artists apply alongside Zaal</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Next travel-ops actions</h2>
+  <ul class="actions">
+    <li><span class="n">1</span><span>Check Global Entry / TSA PreCheck status. If not enrolled, start now, before the Oct-Nov double international stretch.</span></li>
+    <li><span class="n">2</span><span>Decide Token2049 Singapore vs ADE Amsterdam by Jul 15, this also decides which entry-requirements row and budget line actually apply.</span></li>
+    <li><span class="n">3</span><span>Confirm the Oct 3 to Nov 2 gap is enough recovery time between ZAOstock and Mumbai before locking flights.</span></li>
+    <li><span class="n">4</span><span>Get a real flight/hotel quote for whichever Oct stop is picked, replace the ESTIMATE row with sourced numbers.</span></li>
+    <li><span class="n">5</span><span>Confirm the touring gear list against what actually travels vs what AttaBotty already owns vs what needs sourcing per stop.</span></li>
+  </ul>
+
+  <p class="foot">Built 2026-07-06. Entry-requirement facts verified live via web search on this date, re-check before each trip since ETIAS timing is not yet fixed. Dollar figures marked ESTIMATE are planning ranges, not researched quotes.</p>
+</main>
+</body>
+</html>

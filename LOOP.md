@@ -15,10 +15,11 @@ Every wake runs three phases. No iteration ships drafts only - each one must CHE
 ## Phase 2 - BUILD (one artifact per wake, priority order)
 
 1. Anything unblocked by a CHECK trigger (applications > all)
-2. Deck build (season deck HTML) once photo archive exists
-3. ZAOstock <-> circuit tie-ins (run-of-show as case study template, post-event metrics report template)
-4. Remaining collateral (insurance research, testimonial request drafts)
-5. ETH lessons (folded in: 03 account abstraction, 04 Foundry testing, 05 splits) - lower priority than campaign artifacts, higher during Build Camp week when they feed the buildathon
+2. Travel ops research: replace ESTIMATE budget rows in docs/travel.html with real flight/hotel numbers once each stop is decided (Token2049 vs ADE first)
+3. Deck build (season deck HTML) once photo archive exists
+4. ZAOstock <-> circuit tie-ins (run-of-show as case study template, post-event metrics report template)
+5. Remaining collateral (insurance research, testimonial request drafts)
+6. ETH lessons (folded in: 03 account abstraction, 04 Foundry testing, 05 splits) - lower priority than campaign artifacts, higher during Build Camp week when they feed the buildathon
 
 ## Phase 3 - UPDATE
 

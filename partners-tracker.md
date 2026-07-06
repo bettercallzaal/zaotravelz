@@ -78,6 +78,10 @@ Update this file per touch. One row per event partnership.
 - [ ] 2-3 host testimonials - warm targets (Artizen intake): WaveWarZ crew, Moses (Poly Raiders), Gneric (Heritage Collection), KOSBAAR (The Creator Block)
 Target: Aug 1.
 
+## Travel ops (new 2026-07-06, docs/travel.html)
+
+Whole-circuit travel layer built: travel-day load stacked across all confirmed/likely 2026 stops (flags the Oct-Nov double-international-trip risk right after ZAOstock), entry-requirement matrix (India visa done, Singapore/UAE visa-free-or-on-arrival, Amsterdam/Cannes watch for ETIAS launching Q4 2026), a multi-stop budget roll-up (Devcon sourced, other stops marked ESTIMATE pending real research), a packing/gear kit split into pack-vs-source-locally, and a crew roster by stop. Next: replace ESTIMATE budget rows with real flight/hotel research once Token2049 vs ADE is decided (Jul 15), and check Global Entry/TSA PreCheck status given 5-6 international re-entries this year.
+
 ## Intake notes (Artizen session, 2026-07-03)
 
 - PROOF NUMBERS RECONCILED (Zaal confirmed 2026-07-03): WaveWarZ 950 battles (was 735 on pitch pages, fixed everywhere). Volume stays $50-60K+ (472+ SOL, both sources agree). Community phrasing stays 188 members onchain + 1,000+ ecosystem participants (verifiable); 250+ artists is a broader network claim, use only with Zaal's OK. Minor open: artist payouts, '1% of volume' vs 7.8 SOL total, confirm before quoting either. Sends UNBLOCKED.
