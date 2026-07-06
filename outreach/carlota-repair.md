@@ -4,11 +4,9 @@ Context: DM thread on Telegram. Zaal asked how to help more, got redirected to t
 
 Goal: own the tone without over-apologizing, correct the record (he wanted MORE involvement, not to complain or push people out), and take Carlota up on the actual opening she gave, rather than asking to be reinstated as if nothing happened.
 
-## Message (send to Carlota directly)
+## Message (send to Carlota directly) - FINAL, simple version
 
-Hi Carlota, I want to come back to this because I think my last message landed wrong. "I really don't know what to say" reads like frustration or a complaint, and that's not what I meant. I care about this stage and wanted to find ways to help more, not less, and if that came across as pushy or impatient towards you or anyone else, I'm sorry.
-
-I hear you on the pace being community-led, that's the right call and I don't want to push against it. I'd still love to be part of this in whatever way actually fits the dynamic you're building. If there's a smaller, concrete way to contribute, happy to just do that quietly rather than needing a bigger role or a seat on the call. Whatever works for you and the team.
+Hi Carlota, I want to apologize if my last message came across wrong, that wasn't my intent. I really want to be involved with the stage, whether that's helping with promo, prep, or whatever's most useful. Just let me know how I can support.
 
 ## If a group-chat note also feels right (optional, shorter)
 
