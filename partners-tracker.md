@@ -28,9 +28,14 @@ Update this file per touch. One row per event partnership.
 |---|---|---|---|---|---|---|
 | SXSW Austin | Mar 15-21 | Official artist showcase (roster) + side battle night | cart.sxsw.com/products/bandapp | IDEA | **Submit Aug-Sep 2026; CLOSES DEC 18 2026** | Zaal + roster |
 | ETHDenver | Feb | Creator application; BUIDL City battle stage | ethdenver.com/creator | IDEA | Watch app opening ~Oct 2026 | Zaal |
-| EthCC Cannes | Apr 5-8 | EthCC Week side event via portal | ethcc.io/week | IDEA | Apply when portal opens (early 2027) | Zaal |
-| Token2049 Dubai | Apr 21-22 | AFTER party partner | token2049.com | IDEA | After SG relationship (if Oct works, Dubai follows) | Zaal |
-| Consensus Miami | May 4-6 | Pioneer their entertainment track | consensus.coindesk.com | IDEA | Pitch Q1 2027 with 2026 reel | Zaal |
+| EthCC Cannes | Apr 2027 (exact week unconfirmed, Apr 5-8 or 12-15) | EthCC Week side event via portal. Confirmed by Palais des Festivals: EthCC stays in Cannes through 2028, worth a durable relationship | ethcc.io/week | IDEA | Apply when portal opens (early 2027) | Zaal |
+| Token2049 Dubai | Apr 21-22 | AFTER party partner, first attempt (no Singapore relationship to build on, that slot was dropped) | token2049.com/dubai/partners | IDEA | Apply directly, no dependency on the Singapore leg anymore | Zaal |
+| Consensus Miami | May 4-6 | Pioneer their entertainment track | consensus.coindesk.com/become-a-sponsor | IDEA | Pitch Q1 2027 with 2026 reel | Zaal |
+| Sonar+D Barcelona | Jun 17-19 | Real open call for a music-x-tech innovation track (exhibits, AI/music labs, startup pitches), not a cold pitch into a closed lineup. Strongest new fit found 2026-07-08 | sonard@sonarfestival.com | IDEA | Draft an application, this has a real submission process unlike most rows here | Zaal |
+| Sonar+D Istanbul | Apr 9-10 | Same model as Barcelona, smaller (5,000 cap, Zorlu PSM), same curatorial team | sonard@zorlupsm.com | IDEA | Pick ONE Sonar+D, not both | Zaal |
+| Bitcoin 2027 | Jul 15-17 | 20,000+ attendee Bitcoin conference, Nashville. Real precedent: 2024 edition had 3LAU + other DJs playing official after-parties | conference.b.tc | IDEA | Sponsorship inquiry, good fit even though Bitcoin-centric not music-centric | Zaal |
+| Paris Blockchain Week / Signal Week | Jul 6-7 (rebranding) | Institutional fintech focus, but strong independent side-event culture on Luma. Side-event host, not main-stage pitch | parisblockchainweek.com | IDEA | Watch for 2027 relaunch details under Signal Week branding | Zaal |
+| India Blockchain Week | Nov 2027 (TBA, 2026 was Nov) | 50+ side events. Zaal's existing India relationships (Shriyash, Arun, DDAN) make this an easier door than most rows here | indiablockchainweek.com | IDEA | Watch for 2027 dates; leverage the India network built for Devcon 8 | Zaal |
 | FarCon | spring | Farcaster-native battle + Sonata/Coop collab | farcon.xyz + @coopahtroopa | IDEA | Coop Records DM this week doubles as FarCon seed | Zaal |
 | Wallifornia MusicTech | Jul | Summit slot + launch party set | walliforniamusictech.com | IDEA | Apply Q1 2027 | Zaal |
 | VidCon Anaheim | Jul 8-10 | Featured creator + live battle show | vidcon.com | IDEA | Apply when 2027 apps open | Zaal |
@@ -39,7 +44,8 @@ Update this file per touch. One row per event partnership.
 | Token2049 SG / ADE (Q4) | Oct | Both dropped for 2026 (Singapore never pursued, ADE conflicted with Marfa). This is a first attempt for 2027, not a "year-two return" | - | IDEA | Check 2027 dates for both; confirm neither collides with whatever Zaal does around Marfa/Texas in 2027 | Zaal |
 | Art Basel Miami | Dec | Third Basel = residency | - | IDEA | Book from Dec 2026 edition | Zaal |
 | Edge City / Edge Esmeralda | TBA (2026 was May 30-Jun 27, Healdsburg CA) | Pop-up village artist-house fit; direct-invite relationship via Telamon | Telamon Ardavanis, direct | IDEA | Ask Telamon about 2027 dates + a music-house slot; clarify if "Zanzalu" is a related/renamed gathering | Zaal |
-| Music Biz | May (TBA) | B2B music industry, tier 2 priority | musicbiz.org | IDEA | Low priority, watch for dates | - |
+| **Edge India (Edge City pop-up village)** | Oct 11-Nov 1, 2026 | New find 2026-07-08 via edgecity.live/roadmap. Same window as Marfa, runs right up against Devcon Mumbai | Telamon Ardavanis, direct | FLAGGED - unresolved conflict | Get the exact India location, then decide: skip it, let it replace Marfa as a two-birds trip with Mumbai, or something else | Zaal |
+| Music Biz | May (TBA) | B2B music industry, tier 2 priority. Venue confirmed: Hilton San Diego Bayfront | musicbiz.org | IDEA | Low priority, watch for dates | - |
 
 ## Personal attendance (not a partnership pitch, just going)
 
@@ -54,6 +60,10 @@ Update this file per touch. One row per event partnership.
 | Coachella | Closed lineup, no open crypto-culture side-event path found |
 | Permissionless | 2027 dates not announced; watch blockworks.com |
 | TwitchCon | Real audience overlap but no clear artist-showcase path yet |
+| Primavera Sound, Money20/20 (both editions), Fintech India Expo | Researched 2026-07-08, ruled out: no web3/entertainment crossover found at any of the three |
+| ETHPrague, ETHRome, ETHWarsaw, ETHIstanbul, DappCon Berlin | Independent regional ETH dev cons, technical focus, no entertainment programming; most 2027 dates unannounced |
+| Chainlink SmartCon, Global Fintech Fest | No 2027 dates announced, no entertainment angle even if they land |
+| Steve Aoki / 3LAU | Named Arpeggi Labs investors, 3LAU played Bitcoin 2024's after-party, but no festival of their own. Better as collaborators AT an event ZAO already runs than a pitch target |
 
 ## Ecosystem partners (not events - rails that travel with us)
 
