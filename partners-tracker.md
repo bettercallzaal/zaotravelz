@@ -8,7 +8,7 @@ Update this file per touch. One row per event partnership.
 
 | Event | When | Format we pitch | Contact path | Status | Next action | Owner |
 |---|---|---|---|---|---|---|
-| **Devcon 8 India Music Stage** | Nov 3-6 | Status uncertain as of 2026-07-08, a miscommunication happened with Carlota (the community lead/mediator). Zaal is repairing it (see outreach/carlota-repair.md) and still wants to contribute, in whatever way fits. Not a confirmed team seat right now. Attending Devcon 8 itself is unaffected. | Carlota (Telegram, mediator) | STATUS UNCERTAIN | Send the repair message first, let it land before raising anything else with the group | Zaal |
+| **Devcon 8 India Music Stage** | Nov 3-6 | Repair message SENT 2026-07-08 (apologized, offered to help with promo/prep, whatever's useful). Awaiting Carlota's reply. Not a confirmed team seat right now. Attending Devcon 8 itself is unaffected. | Carlota (Telegram, mediator) | AWAITING REPLY | Wait for her response before raising anything else with the group. Do not follow up yet | Zaal |
 | Devcon 8 Ecosystem Program | apply July | ZAO music x onchain community event (5 free tickets) | ecosystem@devcon.org | IDEA | Send interest email THIS WEEK | Zaal |
 | Devcon 8 Community Hub | apply by Aug 12 | "Onchain Music / Independent Artist Economics" hub | forum.devcon.org RFP-13 | IDEA | Draft proposal by Aug 1; recruit 2 co-organizers (now runs alongside the confirmed Music Stage role, not instead of it) | Zaal + Claude |
 | ETHGlobal Mumbai | Nov 6-8 | Live battle at hackathon / closing party slot | ethglobal.com; Liam Horne, Josh Stark | IDEA | Register; pitch after hub decision | Zaal |
