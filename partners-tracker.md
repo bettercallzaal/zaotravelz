@@ -12,8 +12,8 @@ Update this file per touch. One row per event partnership.
 | Devcon 8 Ecosystem Program | apply July | ZAO music x onchain community event (5 free tickets) | ecosystem@devcon.org | IDEA | Send interest email THIS WEEK | Zaal |
 | Devcon 8 Community Hub | apply by Aug 12 | "Onchain Music / Independent Artist Economics" hub | forum.devcon.org RFP-13 | IDEA | Draft proposal by Aug 1; recruit 2 co-organizers (now runs alongside the confirmed Music Stage role, not instead of it) | Zaal + Claude |
 | ETHGlobal Mumbai | Nov 6-8 | Live battle at hackathon / closing party slot | ethglobal.com; Liam Horne, Josh Stark | IDEA | Register; pitch after hub decision | Zaal |
-| Token2049 Singapore | Oct 7-8 | AFTER 2049 side event w/ partner venue | token2049.com partnerships | IDEA | Decide vs ADE by Jul 15 (ZAOstock Oct 3 conflict check) | Zaal |
-| ADE Amsterdam | Oct 21-25 | Web3 music battle slot w/ DGTL co-programming | amsterdam-dance-event.nl + DGTL | IDEA | Decide vs Token2049 by Jul 15 | Zaal |
+| Token2049 Singapore | Oct 7-8 | AFTER 2049 side event w/ partner venue | token2049.com partnerships | DECIDED AGAINST (2026-07-06) | Not pursuing this slot | Zaal |
+| ADE Amsterdam | Oct 21-25 | Web3 music battle slot w/ DGTL co-programming | amsterdam-dance-event.nl + DGTL | IDEA | CONFLICTS with Marfa (Oct 24-26) - confirm with Zaal which one wins | Zaal |
 | Art Basel Miami crypto week | Dec 2-7 | ZAO-CHELLA sequel w/ venue partner (Refraction model) | Crypto Nomads, BitBasel | IDEA | Outreach Sept. Verified receipts (doc 919/364): ZAO-CHELLA Dec 6 2024 Wynwood, 10 artists, AR art, 4pm-11pm run of show, organized AttaBotty + DaNici, Gold sponsor Student $LOANZ. Visual proof: @zaofestivals IG (65 posts) - Zaal must screenshot engagement (login-walled) | Zaal |
 | Web Summit Lisbon | Nov 9-12 | Night Summit slot | websummit.com | IDEA | Low priority; only if Devcon momentum spills | - |
 | NFT.NYC | Sep 1-3 | Side-event battle night | nft.nyc/sponsor + side-event circuit | IDEA | Only if NYC crew available. NOTE: ZAO-PALOOZA exact 2024 date + venue UNCONFIRMED - ask Zaal before citing | AttaBotty? |
@@ -40,6 +40,12 @@ Update this file per touch. One row per event partnership.
 | Art Basel Miami | Dec | Third Basel = residency | - | IDEA | Book from Dec 2026 edition | Zaal |
 | Edge City / Edge Esmeralda | TBA (2026 was May 30-Jun 27, Healdsburg CA) | Pop-up village artist-house fit; direct-invite relationship via Telamon | Telamon Ardavanis, direct | IDEA | Ask Telamon about 2027 dates + a music-house slot; clarify if "Zanzalu" is a related/renamed gathering | Zaal |
 | Music Biz | May (TBA) | B2B music industry, tier 2 priority | musicbiz.org | IDEA | Low priority, watch for dates | - |
+
+## Personal attendance (not a partnership pitch, just going)
+
+| Event | When | Notes |
+|---|---|---|
+| Meet Me in Marfa (tattoo + jewelry convention, has a music component) | Oct 24-26, 2026, Marfa, TX | Zaal is attending, not organizing or pitching. Domestic, fits cleanly in the Oct 3 (ZAOstock) to Nov 2 (Mumbai) gap. Corrected a mix-up: Marfa Invitational (the art fair) is actually in May, not October. Flying Island Marfa (Nov 5-8) would conflict with Devcon Mumbai, not viable if attending both. |
 
 ## Considered, not pursued
 
