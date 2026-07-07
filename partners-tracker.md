@@ -9,7 +9,9 @@ Update this file per touch. One row per event partnership.
 | Event | When | Format we pitch | Contact path | Status | Next action | Owner |
 |---|---|---|---|---|---|---|
 | **Devcon 8 India Music Stage** | Nov 3-6 | Repair message SENT 2026-07-08 (apologized, offered to help with promo/prep, whatever's useful). Awaiting Carlota's reply. Not a confirmed team seat right now. Attending Devcon 8 itself is unaffected. | Carlota (Telegram, mediator) | AWAITING REPLY | Wait for her response before raising anything else with the group. Do not follow up yet | Zaal |
-| Devcon 8 Ecosystem Program | apply July | ZAO music x onchain community event (5 free tickets) | ecosystem@devcon.org | IDEA | Send interest email THIS WEEK | Zaal |
+| **Road to Devcon, Wave 2** | OPEN NOW (2026-07-07) | Distinct from the Ecosystem Program below. Grants for organizing local meetups, hackathons, roundtables, or academic collaborations in the run-up to Devcon 8 | @EFDevcon post, devcon.org | OPEN | Decide if a small India-side music meetup/roundtable is worth organizing to access this, separate from the Music Stage question | Zaal |
+| Devcon 8 Ecosystem Program | apply July, still not open as of 2026-07-07 per official Candu post | ZAO music x onchain community event (5 free tickets) | ecosystem@devcon.org | IDEA | Send interest email THIS WEEK | Zaal |
+| Devcon 8 Volunteer form (2nd wave) | OPEN NOW | Free ticket + meals for volunteering, per @Shahzeb/@OrnellaWeb3 in the Devcon India group | devcon.org/en/form/volunteer/ | OPEN | Low priority given the Music Stage/attendee plans already in motion, but a real backstop if ticket costs bite | Zaal |
 | Devcon 8 Community Hub | apply by Aug 12 | "Onchain Music / Independent Artist Economics" hub | forum.devcon.org RFP-13 | IDEA | Draft proposal by Aug 1; recruit 2 co-organizers (now runs alongside the confirmed Music Stage role, not instead of it) | Zaal + Claude |
 | ETHGlobal Mumbai | Nov 6-8 | Live battle at hackathon / closing party slot | ethglobal.com; Liam Horne, Josh Stark | IDEA | Register; pitch after hub decision | Zaal |
 | Token2049 Singapore | Oct 7-8 | AFTER 2049 side event w/ partner venue | token2049.com partnerships | DECIDED AGAINST (2026-07-06) | Not pursuing this slot | Zaal |
@@ -79,6 +81,13 @@ Most rows below are ideas, not commitments. Rather than keep digging deeper on s
 | Chainlink SmartCon, Global Fintech Fest | No 2027 dates announced, no entertainment angle even if they land |
 | Steve Aoki / 3LAU | Named Arpeggi Labs investors, 3LAU played Bitcoin 2024's after-party, but no festival of their own. Better as collaborators AT an event ZAO already runs than a pitch target |
 
+## New India leads (found in Devcon India Telegram, 2026-07-07)
+
+| Lead | What | Status | Next action |
+|---|---|---|---|
+| Autm ("Cisco disco") | Musician/DJ/composer in the Devcon India group, posted looking to collaborate on the event | IDEA | Worth a DM once the Music Stage situation with Carlota resolves, real artist-side lead |
+| Dinesh (osmosishq.xyz) | Running a 48hr hacker house at Devcon, 16 AI + web3 builders, backed by Visa/McKinsey/Supabase/Clueso/Covalent | IDEA | Low priority, but a networking node worth knowing about |
+
 ## Ecosystem partners (not events - rails that travel with us)
 
 | Partner | Brings | Status | Next action |
@@ -93,7 +102,7 @@ Most rows below are ideas, not commitments. Rather than keep digging deeper on s
 | Fractured Atlas | Fiscal sponsorship (tax-deductible circuit sponsors) | LIVE | Confirm scope covers non-ZAOstock activity |
 | Artizen | Crowdfund rail: ZAO Festivals LIVE on Season 6 ($25k goal, finale ~Jul 9); ZAO also runs a $10k fund there | LIVE | Submit "ZAO Travelz" (artist travel to 2026-27 circuit) to Season 7; playbooks in ZAOartizen repo |
 | Arun Phillips (DreamStarter) | WaveWarZ India lead, ZABAL Games presenter, top ZAO Fund supporter | LIVE | FIRST CALL for anything India |
-| DDAN (Kshitij Garg + Rishabh, Delhi) | Pop-up community stays; already discussed Devcon India LODGING + music-house partnership (doc 810). For Devcon India they have 3 houses (dev house, rooftop founders house w/ podcast studio, newcomer house) 15-20 min from venue. Open to a ZAO music house + community discount coupons | IN CONVO | Revive convo - could solve Mumbai crew lodging |
+| DDAN (Kshitij Garg + Rishabh, Delhi) | Pop-up community stays; already discussed Devcon India LODGING + music-house partnership (doc 810). Rishabh posted in the Devcon India Telegram 2026-07-07 organizing a 45-person group stay near the venue, same track record as ETHIndia Delhi, IBW, Solana Breakpoint Abu Dhabi. Zaal DMed him same day | DMED 2026-07-07 | Follow up on lodging terms + the music-house/discount-coupon angle once he replies | Zaal |
 | Tom Fellenz | Veteran event producer (20+ events), ZAOstock advisor, runs Fellenz Tourz North America | LIVE | Bring into circuit planning as advisor |
 | Aaron Rafferty (Wide) | Wyoming DEX, cause-coins (trading fees fund nonprofits) + debit card | IN CONVO | Live Wide x WaveWarZ x ZAO benefit-battle thread |
 | Bayo (MPC) | Creator tools + supply-chain auth; JV w/ Tim Parker (Spacium, AR/XR); has a musician brother (ZAOstock/WaveWarZ candidate) | IN CONVO | Atrium content-studio intro is a revenue thread |
