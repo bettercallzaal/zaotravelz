@@ -6,6 +6,7 @@ Research backbone: ZAOOS research doc 945 (PR #1058) - full logistics, funding s
 
 ## Status
 
+- NEW: `devcon-america.md` - a separate US-builder community-event track (ESP grant + up to 5 tickets), parallel to the Mumbai trip below. Not yet actioned - open questions logged in the file.
 - MODE: facts first. Sponsor pitch ON HOLD until trip facts + crew size locked (see `trip-facts.md`)
 - Visa: DONE (already in hand)
 - Departure airport: Boston (BOS)
@@ -25,6 +26,7 @@ Research backbone: ZAOOS research doc 945 (PR #1058) - full logistics, funding s
 | `pitch/scholars-essay.md` | Devcon Scholars application essay draft |
 | `pitch/crowdfund-copy.md` | Seed Club campaign copy + Farcaster cast sequence |
 | `buildcamp/` | Ethereum Build Camp notes + project (Jul 4-11) |
+| `devcon-america.md` | US-builder community-event track: ESP grant path, event concept, open questions |
 
 ## Timeline
 
