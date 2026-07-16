@@ -1,6 +1,13 @@
-# DevCon America - route for US builders into Devcon 8
+# ZAO Road to DevCon - not just a US track
 
-Source: ZAOOS research doc 1063 (PR #1309, merged) - CORRECTED 2026-07-13, see note below. Separate from the Mumbai trip (see `README.md`, `budget.md`, `pitch/`).
+Renamed from "DevCon America" (2026-07-16) - scope is wider than US builders now. Source: ZAOOS research doc 1063 (PR #1309, merged) - CORRECTED 2026-07-13, see note below. Separate from Zaal's own Mumbai trip (see `README.md`, `budget.md`, `pitch/`).
+
+## Current focus (2026-07-16): two active threads
+
+1. **Zaal + Hurric4n3IKE crowdfund via WaveWarZ.** Real, in motion as of a July 15, 2026 WaveWarZ community X Space - a WaveWarZ community member announced intent to crowdfund bringing Hurric4n3IKE (WaveWarZ founder/artist) to Devcon India, going through DAOs for funding, planning to film Hurricane performing/vibing at the conference. Not yet locked - Hurricane hasn't confirmed, no DAO funding secured. Video clip embedded on the site now: `docs/devcon8.html` (new "Road to Devcon, track two" section) and archived at `docs/media/wavewarz-devcon-india-space.mp4`.
+2. **Site inclusion.** Done - see the new section in `docs/devcon8.html`, right after the Hurric4n3IKE testimonial quote.
+
+**A reopened door worth flagging:** doc 1063's correction found the ESP rtd8_india grant requires being "based in India or targeting Indian audiences." A pure US-hosted meetup doesn't qualify - but bringing an artist to India to engage Indian music communities and perform at the conference plausibly DOES target an Indian audience. This WaveWarZ/Hurricane effort may be eligible for the ESP grant in a way the original US-builder-roundtable idea wasn't. Not yet verified against the actual application - flagging as a lead to check, not a claim it qualifies.
 
 ## CORRECTION (2026-07-13) - the ESP community-event grant is India-gated, not open
 
