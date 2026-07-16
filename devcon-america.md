@@ -29,7 +29,7 @@ There is no equivalent "Road to Devcon 8 America" or global community-event RFP 
 | Community Hub (RFP-13) / DIP via forum.devcon.org | Programming space or slot inside Devcon 8 itself | Global submission, physically hosted in Mumbai | ZAOOS doc 954, doc 700 |
 | BuidlGuidl-style global University Tour (EF-sponsored) | Campus workshops + club competition, culminating at Devconnect | Global | web search 2026-07-13, not yet verified FULL |
 
-**The real "DevCon America" plan is not a community-event grant application - it is pooling individual ticket levers (Scholars, Builder Discount, Creative Crew) across multiple US-based ZAO builders, plus a shared crowdfund for travel.** That matches the original ask ("a crowdfunding/organizing plan to get US builders to DevCon") more directly than the ESP route did.
+**The real "US builder" plan is not a community-event grant application - it is pooling individual ticket levers (Scholars, Builder Discount, Creative Crew) across multiple US-based ZAO builders, plus a shared crowdfund for travel.** That matches the original ask ("a crowdfunding/organizing plan to get US builders to DevCon") more directly than the ESP route did.
 
 ## The build-a-thon / Build Camp event still stands - just reframed
 
@@ -41,6 +41,7 @@ A roundtable pairing Ethereum Build Camp graduates (demo day was July 11) with Z
 2. Individually, which of Scholars / Builder Discount / Creative Crew does each person qualify for?
 3. Is this a single shared crowdfund (one campaign, split disbursement) or does each builder run their own, mirroring Doc 945's Seed Club approach?
 4. Does the Build Camp x ZABAL Games roundtable happen regardless, as its own content/recruiting piece?
+5. Does Hurricane confirm, and which DAO(s) does the WaveWarZ crowdfund actually go through?
 
 ## Draft timeline (no ESP deadline applies here anymore; dates below are proposed pacing only)
 
@@ -50,6 +51,7 @@ A roundtable pairing Ethereum Build Camp graduates (demo day was July 11) with Z
 | Before committing a date | Check Scholars / Builder Discount / Creative Crew individual eligibility per person | Open |
 | Before committing a date | Decide shared vs. individual crowdfund structure | Open |
 | Whenever ready | Run the Build Camp x ZABAL Games roundtable as content, independent of any grant | Open |
+| Whenever ready | Check whether the WaveWarZ/Hurricane effort qualifies for the ESP rtd8_india grant (targets Indian audience) | Open |
 
 ## Also see
 
