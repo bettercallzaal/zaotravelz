@@ -63,7 +63,7 @@ Read these in order to pick up the work:
 - **docs/devcon8.html** - sponsor pitch (offerings, WaveWarZ proof, community numbers, testimonials).
 - **2027-year-of-zao-festivals.md** - THE MASTER STRATEGY. 2026 proof leg (Mumbai Oct, Marfa, ZAOstock Oct 3), 2027 circuit targets (10-15 events, quarterly breakdown).
 - **devcon-guide.md** - Devcon 8 sponsorship intel (available tiers, deadlines, community hub path, ecosystem program).
-- **devcon-america.md** - US builder community track (ESP mini-grant angle, parallel to Mumbai).
+- **devcon-america.md** - "ZAO Road to DevCon" (renamed from US-only): US builder ticket-lever track, plus the live Zaal + Hurric4n3IKE / WaveWarZ crowdfund thread.
 
 **Pitch kit (ready to send):**
 
