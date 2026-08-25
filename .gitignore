@@ -1,2 +1,5 @@
 .claude/
 .DS_Store
+
+# per-machine agent tooling
+.serena/
